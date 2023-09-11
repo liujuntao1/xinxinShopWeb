@@ -6,11 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="调整菜单，删除无用模块">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/README.es.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/README.ja.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/components/ArticleDetail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/components/Dropdown/Comment.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/components/Dropdown/Platform.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/components/Dropdown/SourceUrl.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/components/Dropdown/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/components/Warning.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/create.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/edit.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/example/list.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +112,7 @@
       <workItem from="1694397305225" duration="1916000" />
       <workItem from="1694399426820" duration="264000" />
       <workItem from="1694400416079" duration="777000" />
-      <workItem from="1694401307558" duration="5762000" />
+      <workItem from="1694401307558" duration="6248000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -143,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694413081487</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="调整菜单，删除无用模块">
+      <created>1694413428255</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694413428255</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
