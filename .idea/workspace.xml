@@ -7,8 +7,6 @@
     <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="调整菜单，新增权限、商品、订单、统计管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/qiniu/upload.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/redirect/index.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694415142612</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="调整菜单，新增权限、商品、订单、统计管理">
+      <created>1694415536286</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694415536286</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

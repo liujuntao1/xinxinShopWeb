@@ -61,7 +61,7 @@ export const asyncRoutes = [
     name: 'Permission',
     meta: {
       title: '权限管理',
-      icon: 'lock'
+      icon: 'el-icon-setting'
     },
     children: [
       {
@@ -79,7 +79,7 @@ export const asyncRoutes = [
         name: 'MenuPermission',
         meta: {
           title: '菜单管理',
-          icon: 'el-icon-s-custom'
+          icon: 'el-icon-s-management'
         }
       },
       {
@@ -97,7 +97,7 @@ export const asyncRoutes = [
         name: 'LogPermission',
         meta: {
           title: '日志管理',
-          icon: 'el-icon-s-custom'
+          icon: 'el-icon-s-claim'
         }
       },
     ]
