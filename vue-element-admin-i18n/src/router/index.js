@@ -1,16 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
-Vue.use(Router)
-
 /* Layout */
 import Layout from '@/layout'
 
 /* Router Modules */
-import componentsRouter from './modules/components'
-import chartsRouter from './modules/charts'
-import tableRouter from './modules/table'
-import nestedRouter from './modules/nested'
+
+Vue.use(Router)
 
 export const constantRoutes = [
   {
@@ -37,7 +32,7 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: '首页', icon: 'dashboard', affix: true }
+        meta: {title: '首页', icon: 'dashboard', affix: true}
       }
     ]
   },
@@ -51,7 +46,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/profile/index'),
         name: 'Profile',
-        meta: { title: 'profile', icon: 'user', noCache: true }
+        meta: {title: 'profile', icon: 'user', noCache: true}
       }
     ]
   }
@@ -74,7 +69,8 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/role'),
         name: 'RolePermission',
         meta: {
-          title: '角色管理'
+          title: '角色管理',
+          icon: 'el-icon-s-custom'
         }
       },
       {
@@ -82,7 +78,8 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/menu'),
         name: 'MenuPermission',
         meta: {
-          title: '菜单管理'
+          title: '菜单管理',
+          icon: 'el-icon-s-custom'
         }
       },
       {
@@ -90,7 +87,8 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/user'),
         name: 'UserPermission',
         meta: {
-          title: '用户管理'
+          title: '用户管理',
+          icon: 'el-icon-user'
         }
       },
       {
@@ -98,7 +96,8 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/log'),
         name: 'LogPermission',
         meta: {
-          title: '日志管理'
+          title: '日志管理',
+          icon: 'el-icon-s-custom'
         }
       },
     ]
@@ -111,7 +110,7 @@ export const asyncRoutes = [
     name: 'Product',
     meta: {
       title: '商品管理',
-      icon: 'lock'
+      icon: 'el-icon-potato-strips'
     },
     children: [
       {
@@ -132,7 +131,7 @@ export const asyncRoutes = [
     name: 'Order',
     meta: {
       title: '订单管理',
-      icon: 'lock'
+      icon: 'el-icon-s-order'
     },
     children: [
       {
@@ -140,7 +139,8 @@ export const asyncRoutes = [
         component: () => import('@/views/order/order'),
         name: 'OrderPermission',
         meta: {
-          title: '订单列表'
+          title: '订单列表',
+          icon: 'lock'
         }
       },
     ]
@@ -153,7 +153,7 @@ export const asyncRoutes = [
     name: 'Statistics',
     meta: {
       title: '统计管理',
-      icon: 'lock'
+      icon: 'el-icon-s-operation'
     },
     children: [
       {
@@ -172,12 +172,12 @@ export const asyncRoutes = [
   // nestedRouter,
   // tableRouter,
   // 404 page must be placed at the end !!!
-  { path: '*', redirect: '/404', hidden: true }
+  {path: '*', redirect: '/404', hidden: true}
 ]
 
 const createRouter = () => new Router({
   // mode: 'history', // require service support
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({y: 0}),
   routes: constantRoutes
 })
 
