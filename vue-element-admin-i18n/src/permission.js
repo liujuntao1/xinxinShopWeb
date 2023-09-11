@@ -1,4 +1,5 @@
 import router from './router'
+import store from './store'
 import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import {getToken} from '@/utils/auth' // get token from cookie
@@ -23,7 +24,23 @@ router.beforeEach(async (to, from, next) => {
       next({path: '/'})
       NProgress.done() // hack: https://github.com/PanJiaChen/vue-element-admin/pull/2939
     } else {
-      next()
+      if (store.getters.roles.length === 0) {
+        store.dispatch('user/getInfo').then(res => { // 拉取用户信息
+          let menus=res.menus;
+          let username=res.userName;
+          store.dispatch('permission/GenerateRoutes', { menus,username }).then(() => { // 生成可访问的路由表
+            router.addRoutes(store.getters.addRouters); // 动态添加可访问路由表
+            next({ ...to, replace: true })
+          })
+        }).catch((err) => {
+          store.dispatch('FedLogOut').then(() => {
+            Message.error(err || 'Verification failed, please login again')
+            next({ path: '/' })
+          })
+        })
+      } else {
+        next()
+      }
     }
   } else {
     if (whiteList.indexOf(to.path) !== -1) {

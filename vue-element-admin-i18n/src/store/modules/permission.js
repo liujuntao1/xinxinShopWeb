@@ -18,46 +18,77 @@ function hasPermission(roles, route) {
  * @param routes asyncRoutes
  * @param roles
  */
-export function filterAsyncRoutes(routes, roles) {
+export function filterAsyncRoutes(routes) {
   const res = []
 
   routes.forEach(route => {
     const tmp = { ...route }
-    if (hasPermission(roles, tmp)) {
       if (tmp.children) {
-        tmp.children = filterAsyncRoutes(tmp.children, roles)
+        tmp.children = filterAsyncRoutes(tmp.children)
       }
       res.push(tmp)
-    }
   })
 
   return res
 }
 
 const state = {
-  routes: [],
-  addRoutes: []
+  routers: constantRoutes,
+  addRouters: []
 }
 
 const mutations = {
-  SET_ROUTES: (state, routes) => {
-    state.addRoutes = routes
-    state.routes = constantRoutes.concat(routes)
+  SET_ROUTERS: (state, routes) => {
+    state.addRouters = routes
+    state.routers = constantRoutes.concat(routes)
   }
 }
 
 const actions = {
-  generateRoutes({ commit }, roles) {
+  GenerateRoutes({ commit }, data) {
     return new Promise(resolve => {
-      let accessedRoutes
-      if (roles.includes('admin')) {
-        accessedRoutes = asyncRoutes || []
-      } else {
-        accessedRoutes = filterAsyncRoutes(asyncRoutes, roles)
-      }
-      commit('SET_ROUTES', accessedRoutes)
-      resolve(accessedRoutes)
+      const { menus } = data;
+      const accessedRouters = asyncRoutes.filter(v => {
+        //admin帐号直接返回所有菜单
+        if (hasPermission(menus, v)) {
+          if (v.children && v.children.length > 0) {
+            v.children = v.children.filter(child => {
+              if (hasPermission(menus, child)) {
+                return child
+              }
+              return false;
+            });
+            return v
+          } else {
+            return v
+          }
+        }
+        return false;
+      });
+      //对菜单进行排序
+      sortRouters(accessedRouters);
+      commit('SET_ROUTERS', accessedRouters);
+      resolve();
     })
+  }
+}
+
+//对菜单进行排序
+function sortRouters(accessedRouters) {
+  for (let i = 0; i < accessedRouters.length; i++) {
+    let router = accessedRouters[i];
+    if(router.children && router.children.length > 0){
+      router.children.sort(compare("sort"));
+    }
+  }
+  accessedRouters.sort(compare("sort"));
+}
+//降序比较函数
+function compare(p){
+  return function(m,n){
+    let a = m[p];
+    let b = n[p];
+    return b - a;
   }
 }
 

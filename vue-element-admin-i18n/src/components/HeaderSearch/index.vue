@@ -37,7 +37,7 @@ export default {
   },
   computed: {
     routes() {
-      return this.$store.getters.permission_routes
+      return this.$store.getters.routers
     },
     lang() {
       return this.$store.getters.language

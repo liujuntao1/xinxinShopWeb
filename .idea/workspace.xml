@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="基础框架搭建">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="完成登陆登出">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/HeaderSearch/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/HeaderSearch/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/permission.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/permission.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +105,10 @@
       <workItem from="1694161679595" duration="5344000" />
       <workItem from="1694393913472" duration="1531000" />
       <workItem from="1694397126902" duration="156000" />
-      <workItem from="1694397305225" duration="619000" />
+      <workItem from="1694397305225" duration="1916000" />
+      <workItem from="1694399426820" duration="264000" />
+      <workItem from="1694400416079" duration="777000" />
+      <workItem from="1694401307558" duration="4286000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -116,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694167888810</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成登陆登出">
+      <created>1694398050045</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694398050045</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +151,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="基础框架搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="基础框架搭建" />
+    <MESSAGE value="完成登陆登出" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成登陆登出" />
   </component>
 </project>
