@@ -65,45 +65,112 @@ export const asyncRoutes = [
     alwaysShow: true, // will always show the root menu
     name: 'Permission',
     meta: {
-      title: 'permission',
-      icon: 'lock',
-      roles: ['admin', 'editor'] // you can set roles in root nav
+      title: '权限管理',
+      icon: 'lock'
     },
     children: [
-      {
-        path: 'page',
-        component: () => import('@/views/permission/page'),
-        name: 'PagePermission',
-        meta: {
-          title: 'pagePermission',
-          roles: ['admin'] // or you can only set roles in sub nav
-        }
-      },
-      {
-        path: 'directive',
-        component: () => import('@/views/permission/directive'),
-        name: 'DirectivePermission',
-        meta: {
-          title: 'directivePermission'
-          // if do not set roles, means: this page does not require permission
-        }
-      },
       {
         path: 'role',
         component: () => import('@/views/permission/role'),
         name: 'RolePermission',
         meta: {
-          title: 'rolePermission',
-          roles: ['admin']
+          title: '角色管理'
         }
-      }
+      },
+      {
+        path: 'menu',
+        component: () => import('@/views/permission/menu'),
+        name: 'MenuPermission',
+        meta: {
+          title: '菜单管理'
+        }
+      },
+      {
+        path: 'user',
+        component: () => import('@/views/permission/user'),
+        name: 'UserPermission',
+        meta: {
+          title: '用户管理'
+        }
+      },
+      {
+        path: 'log',
+        component: () => import('@/views/permission/log'),
+        name: 'LogPermission',
+        meta: {
+          title: '日志管理'
+        }
+      },
+    ]
+  },
+  {
+    path: '/product',
+    component: Layout,
+    redirect: '/product/page',
+    alwaysShow: true, // will always show the root menu
+    name: 'Product',
+    meta: {
+      title: '商品管理',
+      icon: 'lock'
+    },
+    children: [
+      {
+        path: 'product',
+        component: () => import('@/views/product/product'),
+        name: 'ProductPermission',
+        meta: {
+          title: '商品列表'
+        }
+      },
+    ]
+  },
+  {
+    path: '/order',
+    component: Layout,
+    redirect: '/order/page',
+    alwaysShow: true, // will always show the root menu
+    name: 'Order',
+    meta: {
+      title: '订单管理',
+      icon: 'lock'
+    },
+    children: [
+      {
+        path: 'order',
+        component: () => import('@/views/order/order'),
+        name: 'OrderPermission',
+        meta: {
+          title: '订单列表'
+        }
+      },
+    ]
+  },
+  {
+    path: '/statistics',
+    component: Layout,
+    redirect: '/statistics/page',
+    alwaysShow: true, // will always show the root menu
+    name: 'Statistics',
+    meta: {
+      title: '统计管理',
+      icon: 'lock'
+    },
+    children: [
+      {
+        path: 'statistics',
+        component: () => import('@/views/statistics/statistics'),
+        name: 'StatisticsPermission',
+        meta: {
+          title: '统计分析'
+        }
+      },
     ]
   },
   /** when your routing map is too long, you can split it into small modules **/
-  componentsRouter,
-  chartsRouter,
-  nestedRouter,
-  tableRouter,
+  // componentsRouter,
+  // chartsRouter,
+  // nestedRouter,
+  // tableRouter,
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
