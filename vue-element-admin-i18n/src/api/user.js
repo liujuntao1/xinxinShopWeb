@@ -26,9 +26,8 @@ export function update(data) {
 // 删除单个用户
 export function deleteById(id) {
   return request({
-    url: '/sysUser/deleteById',
-    method: 'post',
-    params: { id }
+    url: '/sysUser/deleteById?id='+id,
+    method: 'get'
   })
 }
 // 清空用户角色

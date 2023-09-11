@@ -38,7 +38,7 @@
           <template slot-scope="scope">
             <el-row>
               <el-button type="text"
-                         @click="handleSelectMenu(scope.row)">分配角色
+                         @click="handleSelectRole(scope.row)">分配角色
               </el-button>
             </el-row>
             <el-row>
@@ -92,12 +92,33 @@
         </el-button>
       </div>
     </el-dialog>
+    <!--  角色分配-->
+    <el-dialog :visible.sync="selectRoleDialogVisible" :title="'角色分配'">
+      <el-form :model="user" label-width="60px" label-position="left">
+        <el-form-item label="角色">
+          <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选
+          </el-checkbox>
+          <div style="margin: 15px 0;"></div>
+          <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
+            <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
+          </el-checkbox-group>
+        </el-form-item>
+      </el-form>
+      <div style="text-align:right;">
+        <el-button type="danger" @click="selectRoleDialogVisible=false">
+          取消
+        </el-button>
+        <el-button type="primary" @click="handleSelectRoleSubmit">
+          确定
+        </el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 import {deepClone} from '@/utils'
-import {insert, list,update} from '@/api/user'
+import {deleteById, insert, list, update} from '@/api/user'
 
 const defaultUser = {
   id: '',
@@ -113,7 +134,7 @@ const defaultListQuery = {
   pageSize: 10,
   keyword: null
 };
-
+const cityOptions = ['上海', '北京', '广州', '深圳'];
 export default {
   data() {
     return {
@@ -123,7 +144,13 @@ export default {
       listLoading: false,
       listQuery: Object.assign({}, defaultListQuery),
       dialogVisible: false,
-      dialogType: 'new'
+      dialogType: 'new',
+      //角色分配
+      selectRoleDialogVisible: false,
+      checkAll: false,
+      checkedCities: ['上海', '北京'],
+      cities: cityOptions,
+      isIndeterminate: true
     }
   },
   created() {
@@ -164,25 +191,27 @@ export default {
       this.dialogVisible = true
       this.user = deepClone(scope)
     },
-    handleDelete({row}) {
-      this.$confirm('Confirm to remove the role?', 'Warning', {
-        confirmButtonText: 'Confirm',
-        cancelButtonText: 'Cancel',
+    handleDelete(row) {
+      this.$confirm('确定要删除吗?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
         type: 'warning'
+      }).then(async () => {
+        deleteById(row.id).then(response => {
+          if (response.code === 0) {
+            this.$message({
+              type: 'success',
+              message: '操作成功!'
+            })
+          }
+          this.dialogVisible = false
+          this.getList();
+        });
+      }).catch(err => {
+        console.error(err)
       })
-        .then(async () => {
-          await deleteRole(row.key)
-          this.usersList.splice($index, 1)
-          this.$message({
-            type: 'success',
-            message: 'Delete succed!'
-          })
-        })
-        .catch(err => {
-          console.error(err)
-        })
     },
-    async confirmSubmit() {
+    confirmSubmit() {
       const isEdit = this.dialogType === 'edit'
       if (isEdit) {
         update(this.user).then(response => {
@@ -207,7 +236,24 @@ export default {
           this.getList();
         });
       }
-
+    },
+    handleSelectRole() {
+      this.selectRoleDialogVisible = true;
+    },
+    handleSelectRoleSubmit() {
+      this.$message({
+        type: 'warning',
+        message: '敬请期待!'
+      })
+    },
+    handleCheckAllChange(val) {
+      this.checkedCities = val ? cityOptions : [];
+      this.isIndeterminate = false;
+    },
+    handleCheckedCitiesChange(value) {
+      let checkedCount = value.length;
+      this.checkAll = checkedCount === this.cities.length;
+      this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
     }
   }
 }
