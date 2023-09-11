@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="完成角色列表">
-      <change afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/menu.js" afterDir="false" />
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="完成菜单列表">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1694399426820" duration="264000" />
       <workItem from="1694400416079" duration="777000" />
       <workItem from="1694401307558" duration="6248000" />
-      <workItem from="1694416448563" duration="8164000" />
+      <workItem from="1694416448563" duration="9139000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -199,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694424612845</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="完成菜单列表">
+      <created>1694424957980</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1694424957980</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +233,7 @@
     <MESSAGE value="调整菜单，新增权限、商品、订单、统计管理" />
     <MESSAGE value="完成用户列表、新增修改用户" />
     <MESSAGE value="完成角色列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成角色列表" />
+    <MESSAGE value="完成菜单列表" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成菜单列表" />
   </component>
 </project>

@@ -2,8 +2,8 @@
   <div class="app-container">
     <el-button type="primary" @click="handleAdd()">添加菜单</el-button>
     <div class="table-container">
-      <el-table ref="roleTable"
-                :data="list"
+      <el-table ref="menuTable"
+                :data="listData"
                 style="width: 100%;"
                 v-loading="listLoading" border>
         <el-table-column label="菜单名称" align="center">
@@ -33,15 +33,15 @@
         </el-table-column>
         <el-table-column label="操作" align="center">
           <template slot-scope="scope">
-              <el-button
-                type="text"
-                @click="handleEdit(scope.row)">
-                编辑
-              </el-button>
-              <el-button
-                type="text"
-                @click="handleDelete(scope.row)">删除
-              </el-button>
+            <el-button
+              type="text"
+              @click="handleEdit(scope.row)">
+              编辑
+            </el-button>
+            <el-button
+              type="text"
+              @click="handleDelete(scope.row)">删除
+            </el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -52,10 +52,10 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         layout="total, sizes,prev, pager, next,jumper"
-        :current-page.sync="listQuery.pageNum"
-        :page-size="listQuery.pageSize"
+        :current-page.sync="queryParam.pageNum"
+        :page-size="queryParam.pageSize"
         :page-sizes="[5,10,15]"
-        :total="total">
+        :total="totalNum">
       </el-pagination>
     </div>
     <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改':'新增'">
@@ -101,7 +101,7 @@ const defaultFormData = {
   parentId: '',
   status: 1
 }
-const defaultListQuery = {
+const defaultQueryParam = {
   pageNum: 1,
   pageSize: 10,
   keyword: null
@@ -110,41 +110,41 @@ export default {
   data() {
     return {
       formData: Object.assign({}, defaultFormData),
-      list: null,
-      total: null,
+      listData: null,
+      totalNum: null,
       listLoading: false,
-      listQuery: Object.assign({}, defaultListQuery),
+      queryParam: Object.assign({}, defaultQueryParam),
       dialogVisible: false,
       dialogType: 'new',
     }
   },
   created() {
-    this.getList()
+    this.getListData()
   },
   methods: {
+    getListData() {
+      this.listLoading = true;
+      list(this.queryParam).then(response => {
+        this.listData = response.data.data
+        this.listLoading = false;
+        this.totalNum = response.data.totalNum;
+      });
+    },
     handleResetSearch() {
-      this.listQuery = Object.assign({}, defaultListQuery);
+      this.queryParam = Object.assign({}, defaultQueryParam);
     },
     handleSearchList() {
-      this.listQuery.pageNum = 1;
-      this.getList();
+      this.queryParam.pageNum = 1;
+      this.getListData();
     },
     handleSizeChange(val) {
-      this.listQuery.pageNum = 1;
-      this.listQuery.pageSize = val;
-      this.getList();
+      this.queryParam.pageNum = 1;
+      this.queryParam.pageSize = val;
+      this.getListData();
     },
     handleCurrentChange(val) {
-      this.listQuery.pageNum = val;
-      this.getList();
-    },
-    getList() {
-      this.listLoading = true;
-      list(this.listQuery).then(response => {
-        this.list = response.data.data
-        this.listLoading = false;
-        this.total = response.data.totalNum;
-      });
+      this.queryParam.pageNum = val;
+      this.getListData();
     },
     handleAdd() {
       this.formData = Object.assign({}, defaultFormData)
@@ -170,7 +170,7 @@ export default {
             })
           }
           this.dialogVisible = false
-          this.getList();
+          this.getListData();
         });
       }).catch(err => {
         console.error(err)
@@ -187,7 +187,7 @@ export default {
             })
           }
           this.dialogVisible = false
-          this.getList();
+          this.getListData();
         });
       } else {
         insert(this.formData).then(response => {
@@ -198,7 +198,7 @@ export default {
             })
           }
           this.dialogVisible = false
-          this.getList();
+          this.getListData();
         });
       }
     }
@@ -207,13 +207,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-container {
-  .roles-table {
-    margin-top: 30px;
-  }
-
-  .permission-tree {
-    margin-bottom: 30px;
-  }
-}
 </style>

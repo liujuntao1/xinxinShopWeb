@@ -1,5 +1,23 @@
 <template>
   <div class="app-container">
+    <el-form :inline="true" :model="listQuery" class="demo-form-inline">
+      <el-form-item label="用户名">
+        <el-input v-model="listQuery.userName" placeholder="用户名"></el-input>
+      </el-form-item>
+      <el-form-item label="手机号">
+        <el-input v-model="listQuery.phone" placeholder="手机号"></el-input>
+      </el-form-item>
+      <el-form-item label="用户类型">
+        <el-select v-model="listQuery.region" placeholder="用户类型">
+          <el-option label="类型一" value="shanghai"></el-option>
+          <el-option label="类型二" value="beijing"></el-option>
+        </el-select>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="handleSearchList">查询</el-button>
+        <el-button type="primary" @click="handleResetSearch">重置</el-button>
+      </el-form-item>
+    </el-form>
     <el-button type="primary" @click="handleAdd()">添加用户</el-button>
     <div class="table-container">
       <el-table ref="userTable"
@@ -13,7 +31,13 @@
           <template slot-scope="scope">{{ scope.row.nickName }}</template>
         </el-table-column>
         <el-table-column label="头像" align="center">
-          <template slot-scope="scope"><img style="height: 80px" :src="scope.row.avatar"></template>
+          <template slot-scope="scope">
+            <div class="demo-type">
+              <el-avatar :size="60" src="https://empty" @error="errorHandler">
+                <img :src="scope.row.avatar">
+              </el-avatar>
+            </div>
+          </template>
         </el-table-column>
         <el-table-column label="手机号" align="center">
           <template slot-scope="scope">{{ scope.row.phone }}</template>
