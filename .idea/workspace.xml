@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="基础框架搭建">
-      <change afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/permission.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +43,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/刘俊涛/xx商城项目/mall-admin-web-master/mall-admin-web-master",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "ts.external.directory.path": "D:\\tools\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/刘俊涛/xx商城项目/mall-admin-web-master/mall-admin-web-master&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\tools\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.dev (1)">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/vue-element-admin-i18n/package.json" />
@@ -100,7 +97,10 @@
       <updated>1694074560742</updated>
       <workItem from="1694074563517" duration="691000" />
       <workItem from="1694161181596" duration="421000" />
-      <workItem from="1694161679595" duration="5025000" />
+      <workItem from="1694161679595" duration="5344000" />
+      <workItem from="1694393913472" duration="1531000" />
+      <workItem from="1694397126902" duration="156000" />
+      <workItem from="1694397305225" duration="619000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -109,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694161452520</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="基础框架搭建">
+      <created>1694167888810</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694167888810</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,17 +137,5 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="基础框架搭建" />
     <option name="LAST_COMMIT_MESSAGE" value="基础框架搭建" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/vue-element-admin-i18n/src/utils/request.js</url>
-          <line>7</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
