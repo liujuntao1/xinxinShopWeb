@@ -1,24 +1,57 @@
 import request from '@/utils/request'
-
-export function login(data) {
+// 用户分页列表
+export function list(data) {
   return request({
-    url: '/sysLogin/login',
+    url: '/sysUser/pageList',
     method: 'post',
     data
   })
 }
-
-export function getInfo(token) {
+// 新增用户
+export function insert(data) {
   return request({
-    url: '/sysLogin/getUserInfo',
-    method: 'get',
-    params: {token}
+    url: '/sysUser/insert',
+    method: 'post',
+    data
   })
 }
-
-export function logout() {
+// 修改用户
+export function update(data) {
   return request({
-    url: '/sysLogin/logout',
-    method: 'post'
+    url: '/sysUser/update',
+    method: 'post',
+    data
+  })
+}
+// 删除单个用户
+export function deleteById(id) {
+  return request({
+    url: '/sysUser/deleteById',
+    method: 'post',
+    params: { id }
+  })
+}
+// 清空用户角色
+export function deleteUserRoleById(id) {
+  return request({
+    url: '/sysUser/deleteUserRoleById',
+    method: 'post',
+    params: { id }
+  })
+}
+// 查询用户关联的角色
+export function listUserRoleById(id) {
+  return request({
+    url: '/sysUser/listUserRoleById',
+    method: 'post',
+    params: { id }
+  })
+}
+// 新增用户角色
+export function insertUserRole(data) {
+  return request({
+    url: '/sysUser/insertUserRole',
+    method: 'post',
+    data
   })
 }

@@ -4,10 +4,11 @@ import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import {getToken} from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
+import { Message } from 'element-ui'
 
 NProgress.configure({showSpinner: false}) // NProgress Configuration
 
-const whiteList = ['/login', '/auth-redirect']
+const whiteList = ['/login']
 
 router.beforeEach(async (to, from, next) => {
   // start progress bar
@@ -33,7 +34,7 @@ router.beforeEach(async (to, from, next) => {
             next({ ...to, replace: true })
           })
         }).catch((err) => {
-          store.dispatch('FedLogOut').then(() => {
+          store.dispatch('user/resetToken').then(() => {
             Message.error(err || 'Verification failed, please login again')
             next({ path: '/' })
           })

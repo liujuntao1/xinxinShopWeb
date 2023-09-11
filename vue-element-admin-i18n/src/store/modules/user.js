@@ -1,4 +1,4 @@
-import {getInfo, login, logout} from '@/api/user'
+import {getInfo, login, logout} from '@/api/login'
 import {getToken, removeToken, setToken} from '@/utils/auth'
 import router, {resetRouter} from '@/router'
 
@@ -13,9 +13,6 @@ const state = {
 const mutations = {
   SET_TOKEN: (state, token) => {
     state.token = token
-  },
-  SET_INTRODUCTION: (state, introduction) => {
-    state.introduction = introduction
   },
   SET_NAME: (state, name) => {
     state.name = name
@@ -51,17 +48,16 @@ const actions = {
           reject('Verification failed, please Login again.')
         }
 
-        const {roles, userName, avatar, introduction} = data
+        const {roles, userName, avatar} = data
 
         // roles must be a non-empty array
         if (!roles || roles.length <= 0) {
-          reject('getInfo: roles must be a non-null array!')
+          reject('当前用户没有任何角色，请为用户分配角色后登陆!')
         }
 
         commit('SET_ROLES', roles)
         commit('SET_NAME', userName)
         commit('SET_AVATAR', avatar)
-        commit('SET_INTRODUCTION', introduction)
         resolve(data)
       }).catch(error => {
         reject(error)
