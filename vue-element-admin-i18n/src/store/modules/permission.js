@@ -49,7 +49,6 @@ const actions = {
     return new Promise(resolve => {
       const { menus } = data;
       const accessedRouters = asyncRoutes.filter(v => {
-        //admin帐号直接返回所有菜单
         if (hasPermission(menus, v)) {
           if (v.children && v.children.length > 0) {
             v.children = v.children.filter(child => {
@@ -65,7 +64,6 @@ const actions = {
         }
         return false;
       });
-      //对菜单进行排序
       sortRouters(accessedRouters);
       commit('SET_ROUTERS', accessedRouters);
       resolve();
