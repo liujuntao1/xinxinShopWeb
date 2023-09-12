@@ -93,7 +93,7 @@
       </el-pagination>
     </div>
     <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改用户':'新增用户'" width="40%">
-      <el-form :model="user" label-width="60px" label-position="left">
+      <el-form :model="user" label-width="80px" label-position="left">
         <el-row :gutter="20">
           <el-col :span="12">
             <el-form-item label="用户名">
@@ -105,8 +105,6 @@
               <el-input v-model="user.nickName" placeholder="姓名"/>
             </el-form-item>
           </el-col>
-        </el-row>
-        <el-row :gutter="20">
           <el-col :span="12">
             <el-form-item label="手机号">
               <el-input v-model="user.phone" placeholder="手机号"/>
@@ -114,6 +112,20 @@
           </el-col>
           <el-col :span="12">
             <el-form-item label="邮箱">
+              <el-input v-model="user.email" placeholder="邮箱"/>
+            </el-form-item>
+          </el-col>
+          <!--          TODO 待扩展字段-性别、出生日期-->
+          <el-col :span="12">
+            <!--            <el-form-item label="性别">-->
+            <!--              <el-radio-group v-model="switchRoles">-->
+            <!--                <el-radio-button label="editor"/>-->
+            <!--                <el-radio-button label="admin"/>-->
+            <!--              </el-radio-group>-->
+            <!--            </el-form-item>-->
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="出生日期">
               <el-input v-model="user.email" placeholder="邮箱"/>
             </el-form-item>
           </el-col>
@@ -129,14 +141,14 @@
       </div>
     </el-dialog>
     <!--  角色分配-->
-    <el-dialog :visible.sync="selectRoleDialogVisible" :title="'角色分配'">
-      <el-form :model="user" label-width="60px" label-position="left">
+    <el-dialog :visible.sync="selectRoleDialogVisible" :title="'角色分配'" width="40%">
+      <el-form :model="userRoleListModel" label-width="80px" label-position="left">
         <el-form-item label="角色">
           <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选
           </el-checkbox>
           <div style="margin: 15px 0;"></div>
-          <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-            <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
+          <el-checkbox-group v-model="userRoleListModel.roleIds" @change="handleCheckedRolesChange">
+            <el-checkbox v-for="role in roleLists" :label="role.id" :key="role.id">{{ role.name }}</el-checkbox>
           </el-checkbox-group>
         </el-form-item>
       </el-form>
@@ -154,7 +166,8 @@
 
 <script>
 import {deepClone} from '@/utils'
-import {deleteById, insert, list, update} from '@/api/user'
+import {deleteById, insert, insertUserRole, list, update} from '@/api/user'
+import {getRoleList} from '@/api/role2'
 
 const defaultUser = {
   id: '',
@@ -170,7 +183,10 @@ const defaultListQuery = {
   pageSize: 10,
   keyword: null
 };
-const cityOptions = ['上海', '北京', '广州', '深圳'];
+const defaultUserRoleListModel = {
+  userId: null,
+  roleIds: []
+};
 export default {
   data() {
     return {
@@ -184,15 +200,21 @@ export default {
       //角色分配
       selectRoleDialogVisible: false,
       checkAll: false,
-      checkedCities: ['上海', '北京'],
-      cities: cityOptions,
-      isIndeterminate: true
+      roleLists: [],
+      isIndeterminate: true,
+      userRoleListModel: Object.assign({}, defaultUserRoleListModel)
     }
   },
   created() {
-    this.getList()
+    this.getList();
+    this.getRoleList();
   },
   methods: {
+    getRoleList() {
+      getRoleList().then(response => {
+        this.roleLists = response.data
+      });
+    },
     handleResetSearch() {
       this.listQuery = Object.assign({}, defaultListQuery);
     },
@@ -273,24 +295,47 @@ export default {
         });
       }
     },
-    handleSelectRole() {
+    handleSelectRole(row) {
+      this.userRoleListModel.userId = row.id;
+      this.userRoleListModel.roleIds = row.roleIds;
+      let length = this.userRoleListModel.roleIds.length;
+      this.checkAll = length === this.roleLists.length;
+      this.isIndeterminate = length > 0 && length < this.roleLists.length;
       this.selectRoleDialogVisible = true;
     },
     handleSelectRoleSubmit() {
-      this.$message({
-        type: 'warning',
-        message: '敬请期待!'
-      })
+      if (this.userRoleListModel.roleIds == null || this.userRoleListModel.roleIds.length <= 0) {
+        this.$message({
+          type: 'error',
+          message: '请至少选择一个!'
+        });
+        return;
+      }
+      insertUserRole(this.userRoleListModel).then(response => {
+        if (response.code === 0) {
+          this.$message({
+            type: 'success',
+            message: '操作成功!'
+          })
+        }
+        this.selectRoleDialogVisible = false
+        this.getList();
+        this.clearUserRoleListModel();
+      });
     },
     handleCheckAllChange(val) {
-      this.checkedCities = val ? cityOptions : [];
+      this.userRoleListModel.roleIds = val ? this.roleLists.map(item => item.id) : [];
       this.isIndeterminate = false;
     },
-    handleCheckedCitiesChange(value) {
+    handleCheckedRolesChange(value) {
       let checkedCount = value.length;
-      this.checkAll = checkedCount === this.cities.length;
-      this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
-    }
+      this.checkAll = checkedCount === this.roleLists.length;
+      this.isIndeterminate = checkedCount > 0 && checkedCount < this.roleLists.length;
+      this.userRoleListModel.roleIds.add(value);
+    },
+    clearUserRoleListModel() {
+      this.userRoleListModel = Object.assign({}, defaultUserRoleListModel)
+    },
   }
 }
 </script>
