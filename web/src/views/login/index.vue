@@ -1,4 +1,5 @@
 <template>
+<!--  TODO 添加获取验证码功能，登录提交时连同验证码一起提交-->
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on"
              label-position="left">
@@ -67,11 +68,10 @@
 
 <script>
 import LangSelect from '@/components/LangSelect'
-import SocialSign from './components/SocialSignin'
 
 export default {
   name: 'Login',
-  components: {LangSelect, SocialSign},
+  components: {LangSelect},
   data() {
     const validateUsername = (rule, value, callback) => {
       if (value.length <= 0) {
