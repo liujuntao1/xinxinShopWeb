@@ -143,7 +143,7 @@
     <!--  角色分配-->
     <el-dialog :visible.sync="selectRoleDialogVisible" :title="'角色分配'" width="40%">
       <el-form :model="userRoleListModel" label-width="80px" label-position="left">
-        <el-form-item label="角色">
+        <el-form-item>
           <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选
           </el-checkbox>
           <div style="margin: 15px 0;"></div>
