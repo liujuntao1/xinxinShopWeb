@@ -5,297 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="文件夹重命名">
+      <change afterPath="$PROJECT_DIR$/web/src/api/log.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/web/.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.production" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.env.staging" beforeDir="false" afterPath="$PROJECT_DIR$/web/.env.staging" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/.eslintignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/.github/FUNDING.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.github/ISSUE_TEMPLATE/feature_request.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.github/ISSUE_TEMPLATE/question.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/.github/ISSUE_TEMPLATE/question.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/web/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/web/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/README.zh-CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/web/README.zh-CN.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/build/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/jsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/jsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/mock-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/mock-server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/remote-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/remote-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/role/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/role/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/role/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/role/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/mock/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/component/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/component/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/component/prompt.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/component/prompt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/store/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/store/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/store/prompt.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/store/prompt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/view/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/view/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plop-templates/view/prompt.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/plop-templates/view/prompt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/plopfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/plopfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/qiniu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/qiniu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/remote-search.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/remote-search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/role.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/role.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/role2.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/role2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/assets/401_images/401.gif" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/401_images/401.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/assets/404_images/404.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/404_images/404.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/assets/404_images/404_cloud.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/404_images/404_cloud.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/assets/custom-theme/fonts/element-icons.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/custom-theme/fonts/element-icons.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/assets/custom-theme/fonts/element-icons.woff" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/custom-theme/fonts/element-icons.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/assets/custom-theme/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/assets/custom-theme/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/BackToTop/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/BackToTop/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Breadcrumb/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Breadcrumb/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Charts/Keyboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Charts/Keyboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Charts/LineMarker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Charts/LineMarker.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Charts/MixChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Charts/MixChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Charts/mixins/resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Charts/mixins/resize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/DndList/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/DndList/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/DragSelect/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/DragSelect/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Dropzone/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Dropzone/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ErrorLog/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ErrorLog/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/GithubCorner/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/GithubCorner/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Hamburger/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Hamburger/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/HeaderSearch/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/HeaderSearch/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ImageCropper/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ImageCropper/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ImageCropper/utils/data2blob.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ImageCropper/utils/data2blob.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ImageCropper/utils/effectRipple.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ImageCropper/utils/effectRipple.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ImageCropper/utils/language.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ImageCropper/utils/language.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ImageCropper/utils/mimes.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ImageCropper/utils/mimes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/JsonEditor/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/JsonEditor/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Kanban/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Kanban/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/LangSelect/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/LangSelect/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/MDinput/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MDinput/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/MarkdownEditor/default-options.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MarkdownEditor/default-options.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/MarkdownEditor/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/MarkdownEditor/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Pagination/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Pagination/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/PanThumb/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/PanThumb/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/RightPanel/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/RightPanel/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Screenfull/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Screenfull/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Share/DropdownMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Share/DropdownMenu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/SizeSelect/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/SizeSelect/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Sticky/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Sticky/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/SvgIcon/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/SvgIcon/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/TextHoverEffect/Mallki.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/TextHoverEffect/Mallki.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/ThemePicker/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/ThemePicker/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Tinymce/components/EditorImage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Tinymce/components/EditorImage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Tinymce/dynamicLoadScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Tinymce/dynamicLoadScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Tinymce/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Tinymce/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Tinymce/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Tinymce/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Tinymce/toolbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Tinymce/toolbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Upload/SingleImage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Upload/SingleImage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Upload/SingleImage2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Upload/SingleImage2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/Upload/SingleImage3.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/Upload/SingleImage3.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/components/UploadExcel/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/UploadExcel/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/clipboard/clipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/clipboard/clipboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/clipboard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/clipboard/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/el-drag-dialog/drag.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/el-drag-dialog/drag.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/el-drag-dialog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/el-drag-dialog/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/el-table/adaptive.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/el-table/adaptive.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/el-table/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/el-table/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/permission/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/permission/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/permission/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/permission/permission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/sticky.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/sticky.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/waves/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/waves/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/waves/waves.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/waves/waves.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/directive/waves/waves.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/directive/waves/waves.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/filters/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/filters/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/404.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/404.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/bug.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/bug.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/chart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/chart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/clipboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/clipboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/component.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/component.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/dashboard.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/dashboard.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/documentation.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/documentation.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/drag.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/drag.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/edit.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/education.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/education.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/email.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/email.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/example.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/example.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/excel.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/excel.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/exit-fullscreen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/exit-fullscreen.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/eye-open.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/eye-open.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/eye.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/eye.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/form.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/form.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/fullscreen.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/fullscreen.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/guide.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/guide.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/icon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/international.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/international.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/language.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/language.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/link.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/link.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/list.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/list.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/lock.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/lock.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/message.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/message.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/money.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/money.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/nested.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/nested.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/password.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/password.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/pdf.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/pdf.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/people.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/people.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/peoples.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/peoples.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/qq.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/qq.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/search.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/shopping.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/shopping.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/size.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/size.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/skill.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/skill.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/star.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/star.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/tab.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/table.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/table.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/theme.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/theme.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/tree-table.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/tree-table.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/tree.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/tree.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/user.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/user.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/wechat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/wechat.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svg/zip.svg" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svg/zip.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/icons/svgo.yml" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/icons/svgo.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/lang/en.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lang/en.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/lang/es.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lang/es.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/lang/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lang/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/lang/ja.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lang/ja.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/lang/zh.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/lang/zh.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/AppMain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/AppMain.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Settings/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/FixiOSBug.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Sidebar/FixiOSBug.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Sidebar/Item.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/Link.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Sidebar/Link.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/Logo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Sidebar/Logo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/SidebarItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Sidebar/SidebarItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/Sidebar/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/Sidebar/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/TagsView/ScrollPane.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/TagsView/ScrollPane.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/TagsView/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/TagsView/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/layout/mixin/ResizeHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/layout/mixin/ResizeHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/permission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/modules/charts.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/modules/charts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/modules/components.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/modules/components.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/modules/nested.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/modules/nested.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/router/modules/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/modules/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/errorLog.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/errorLog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/permission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/tagsView.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/tagsView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/btn.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/btn.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/element-ui.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/element-ui.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/element-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/element-variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/mixin.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/sidebar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/transition.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/transition.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/styles/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/styles/variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/clipboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/clipboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/error-log.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/error-log.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/get-page-title.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/get-page-title.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/i18n.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/open-window.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/open-window.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/permission.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/scroll-to.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/scroll-to.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/utils/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/utils/validate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/vendor/Export2Excel.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/vendor/Export2Excel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/vendor/Export2Zip.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/vendor/Export2Zip.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/charts/keyboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/charts/keyboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/charts/line.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/charts/line.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/charts/mix-chart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/charts/mix-chart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/avatar-upload.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/avatar-upload.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/back-to-top.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/back-to-top.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/count-to.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/count-to.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/dnd-list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/dnd-list.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/drag-dialog.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/drag-dialog.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/drag-kanban.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/drag-kanban.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/drag-select.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/drag-select.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/dropzone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/dropzone.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/json-editor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/json-editor.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/markdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/markdown.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/mixin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/mixin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/split-pane.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/split-pane.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/sticky.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/sticky.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/components-demo/tinymce.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/tinymce.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/BarChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/BarChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/BoxCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/BoxCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/LineChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/LineChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/PanelGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/PanelGroup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/PieChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/PieChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/RaddarChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/RaddarChart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/TodoList/Todo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/TodoList/Todo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/TodoList/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/TodoList/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/TodoList/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/TodoList/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/TransactionTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/TransactionTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/components/mixins/resize.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/components/mixins/resize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/admin/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/admin/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/editor/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/editor/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/dashboard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/dashboard/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/documentation/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/documentation/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/error-page/401.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/error-page/401.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/error-page/404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/error-page/404.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/i18n-demo/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/i18n-demo/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/i18n-demo/local.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/i18n-demo/local.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/login/auth-redirect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/login/auth-redirect.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/login/components/SocialSignin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/login/components/SocialSignin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/login/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/login/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu1/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu1/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu1/menu1-1/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-1/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu1/menu1-2/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-2/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu1/menu1-2/menu1-2-1/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-2/menu1-2-1/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu1/menu1-2/menu1-2-2/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-2/menu1-2-2/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu1/menu1-3/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-3/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/nested/menu2/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/nested/menu2/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/order/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/order/order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/components/SwitchRoles.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/components/SwitchRoles.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/directive.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/directive.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/log.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/log.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/page.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/page.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/role.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/role.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/user.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/product/product.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/product/product.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/profile/components/Account.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/components/Account.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/profile/components/Activity.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/components/Activity.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/profile/components/Timeline.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/components/Timeline.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/profile/components/UserCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/components/UserCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/profile/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/statistics/statistics.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/statistics/statistics.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/tab/components/TabPane.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/tab/components/TabPane.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/tab/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/tab/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/table/complex-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/table/complex-table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/table/drag-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/table/drag-table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/table/dynamic-table/components/FixedThead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/table/dynamic-table/components/FixedThead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/table/dynamic-table/components/UnfixedThead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/table/dynamic-table/components/UnfixedThead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/table/dynamic-table/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/table/dynamic-table/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/src/views/table/inline-edit-table.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/table/inline-edit-table.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/components/Hamburger.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/components/Hamburger.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/components/SvgIcon.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/components/SvgIcon.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/utils/formatTime.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/utils/formatTime.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/utils/param2Obj.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/utils/param2Obj.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/utils/parseTime.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/utils/parseTime.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/tests/unit/utils/validate.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/tests/unit/utils/validate.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-element-admin-i18n/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/permission/log.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/log.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,31 +44,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/刘俊涛/xx商城项目/xinxinShop/xinxinShopWeb/vue-element-admin-i18n/src/api&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\tools\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/刘俊涛/xx商城项目/xinxinShop/xinxinShopWeb/web/src/api",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "ts.external.directory.path": "D:\\tools\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\web\src\api" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\api" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\statistics" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\order" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\product" />
-      <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\permission" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.dev (2)">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/vue-element-admin-i18n/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev (2)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/web/package.json" />
       <command value="run" />
       <scripts>
         <script value="dev" />
@@ -376,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev (2)" />
         <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
       </list>
@@ -403,7 +127,7 @@
       <workItem from="1694401307558" duration="6248000" />
       <workItem from="1694416448563" duration="9139000" />
       <workItem from="1694480092607" duration="17000" />
-      <workItem from="1694482749125" duration="740000" />
+      <workItem from="1694482749125" duration="4112000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -496,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694424957980</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="文件夹重命名">
+      <created>1694483706759</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1694483706759</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

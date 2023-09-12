@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
@@ -9,3 +9,11 @@ export default {
   name: 'App'
 }
 </script>
+
+<style>
+/*el-dialog圆角*/
+.el-dialog {
+  border-radius: 10px;
+}
+
+</style>
