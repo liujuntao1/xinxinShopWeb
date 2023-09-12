@@ -58,23 +58,43 @@
         :total="totalNum">
       </el-pagination>
     </div>
-    <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改':'新增'">
+    <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改':'新增'" width="40%">
       <el-form :model="formData" label-width="80px" label-position="left">
-        <el-form-item label="名称">
-          <el-input v-model="formData.name" placeholder="名称"/>
-        </el-form-item>
-        <el-form-item label="编码">
-          <el-input v-model="formData.code" placeholder="编码"/>
-        </el-form-item>
-        <el-form-item label="地址">
-          <el-input v-model="formData.url" placeholder="地址"/>
-        </el-form-item>
-        <el-form-item label="图标">
-          <el-input v-model="formData.icon" placeholder="图标"/>
-        </el-form-item>
-        <el-form-item label="上级">
-          <el-input v-model="formData.parentId" placeholder="上级"/>
-        </el-form-item>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="菜单名称">
+              <el-input v-model="formData.name" placeholder="菜单名称"/>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="菜单编码">
+              <el-input v-model="formData.code" placeholder="菜单编码"/>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="菜单地址">
+              <el-input v-model="formData.url" placeholder="菜单地址"/>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="菜单图标">
+              <el-input v-model="formData.icon" placeholder="菜单图标"/>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="上级菜单">
+              <el-input v-model="formData.parentId" placeholder="上级菜单"/>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+          </el-col>
+        </el-row>
+
+
       </el-form>
       <div style="text-align:right;">
         <el-button type="danger" @click="dialogVisible=false">

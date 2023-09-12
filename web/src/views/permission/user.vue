@@ -92,20 +92,32 @@
         :total="total">
       </el-pagination>
     </div>
-    <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改用户':'新增用户'">
+    <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改用户':'新增用户'" width="40%">
       <el-form :model="user" label-width="60px" label-position="left">
-        <el-form-item label="用户名">
-          <el-input v-model="user.userName" placeholder="用户名"/>
-        </el-form-item>
-        <el-form-item label="姓名">
-          <el-input v-model="user.nickName" placeholder="姓名"/>
-        </el-form-item>
-        <el-form-item label="手机号">
-          <el-input v-model="user.phone" placeholder="手机号"/>
-        </el-form-item>
-        <el-form-item label="邮箱">
-          <el-input v-model="user.email" placeholder="邮箱"/>
-        </el-form-item>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="用户名">
+              <el-input v-model="user.userName" placeholder="用户名"/>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="姓名">
+              <el-input v-model="user.nickName" placeholder="姓名"/>
+            </el-form-item>
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="手机号">
+              <el-input v-model="user.phone" placeholder="手机号"/>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="邮箱">
+              <el-input v-model="user.email" placeholder="邮箱"/>
+            </el-form-item>
+          </el-col>
+        </el-row>
       </el-form>
       <div style="text-align:right;">
         <el-button type="danger" @click="dialogVisible=false">

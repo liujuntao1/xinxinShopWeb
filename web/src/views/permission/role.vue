@@ -59,14 +59,20 @@
         :total="total">
       </el-pagination>
     </div>
-    <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改角色':'新增角色'">
+    <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改角色':'新增角色'" width="40%">
       <el-form :model="formData" label-width="80px" label-position="left">
-        <el-form-item label="角色名称">
-          <el-input v-model="formData.name" placeholder="角色名称"/>
-        </el-form-item>
-        <el-form-item label="角色编码">
-          <el-input v-model="formData.code" placeholder="角色编码"/>
-        </el-form-item>
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-form-item label="角色名称">
+              <el-input v-model="formData.name" placeholder="角色名称"/>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="角色编码">
+              <el-input v-model="formData.code" placeholder="角色编码"/>
+            </el-form-item>
+          </el-col>
+        </el-row>
       </el-form>
       <div style="text-align:right;">
         <el-button type="danger" @click="dialogVisible=false">
@@ -78,7 +84,7 @@
       </div>
     </el-dialog>
     <!--  授权-->
-    <el-dialog :visible.sync="selectRoleDialogVisible" :title="'授权'">
+    <el-dialog :visible.sync="selectRoleDialogVisible" :title="'授权'" width="45%">
       <el-form :model="user" label-width="60px" label-position="left">
         <el-form-item label="菜单">
           <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选
