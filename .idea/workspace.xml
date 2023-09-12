@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-用户列表-分配角色">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-角色列表-角色授权">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/api/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/api/role2.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/role2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/role.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/role.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +128,7 @@
       <workItem from="1694482749125" duration="8635000" />
       <workItem from="1694504686525" duration="20000" />
       <workItem from="1694504892734" duration="3896000" />
-      <workItem from="1694508807466" duration="1967000" />
+      <workItem from="1694508807466" duration="2420000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -259,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694508662142</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="权限管理-角色列表-角色授权">
+      <created>1694511037187</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1694511037187</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,6 +294,7 @@
     <MESSAGE value="日志列表" />
     <MESSAGE value="changes" />
     <MESSAGE value="权限管理-用户列表-分配角色" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理-用户列表-分配角色" />
+    <MESSAGE value="权限管理-角色列表-角色授权" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理-角色列表-角色授权" />
   </component>
 </project>
