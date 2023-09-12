@@ -35,28 +35,11 @@ export function deleteById(id) {
   })
 }
 
-// 清空角色角色
-export function deleteUserRoleById(id) {
-  return request({
-    url: '/sysRole/deleteUserRoleById',
-    method: 'post',
-    params: {id}
-  })
-}
 
-// 查询角色关联的用户
-export function listUserRoleById(id) {
+// 角色关联菜单
+export function insertRoleMenu(data) {
   return request({
-    url: '/sysRole/listUserRoleById',
-    method: 'post',
-    params: {id}
-  })
-}
-
-// 新增角色角色
-export function insertUserRole(data) {
-  return request({
-    url: '/sysRole/insertUserRole',
+    url: '/sysRole/insertRoleMenu',
     method: 'post',
     data
   })

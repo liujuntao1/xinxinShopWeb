@@ -296,11 +296,13 @@ export default {
       }
     },
     handleSelectRole(row) {
-      this.userRoleListModel.userId = row.id;
-      this.userRoleListModel.roleIds = row.roleIds;
-      let length = this.userRoleListModel.roleIds.length;
-      this.checkAll = length === this.roleLists.length;
-      this.isIndeterminate = length > 0 && length < this.roleLists.length;
+      this.userRoleListModel = {
+        userId: row.id,
+        roleIds: row.roleIds,
+      };
+      const roleListLength = this.roleLists.length;
+      this.checkAll = roleListLength === this.userRoleListModel.roleIds.length;
+      this.isIndeterminate = roleListLength > 0 && roleListLength < this.userRoleListModel.roleIds.length;
       this.selectRoleDialogVisible = true;
     },
     handleSelectRoleSubmit() {
@@ -320,7 +322,6 @@ export default {
         }
         this.selectRoleDialogVisible = false
         this.getList();
-        this.clearUserRoleListModel();
       });
     },
     handleCheckAllChange(val) {
@@ -332,10 +333,7 @@ export default {
       this.checkAll = checkedCount === this.roleLists.length;
       this.isIndeterminate = checkedCount > 0 && checkedCount < this.roleLists.length;
       this.userRoleListModel.roleIds.add(value);
-    },
-    clearUserRoleListModel() {
-      this.userRoleListModel = Object.assign({}, defaultUserRoleListModel)
-    },
+    }
   }
 }
 </script>

@@ -84,22 +84,22 @@
       </div>
     </el-dialog>
     <!--  授权-->
-    <el-dialog :visible.sync="selectRoleDialogVisible" :title="'授权'" width="45%">
-      <el-form :model="user" label-width="60px" label-position="left">
-        <el-form-item label="菜单">
+    <el-dialog :visible.sync="selectMenuDialogVisible" :title="'菜单授权'" width="45%">
+      <el-form :model="roleMenuListModel" label-width="60px" label-position="left">
+        <el-form-item>
           <el-checkbox :indeterminate="isIndeterminate" v-model="checkAll" @change="handleCheckAllChange">全选
           </el-checkbox>
           <div style="margin: 15px 0;"></div>
-          <el-checkbox-group v-model="checkedCities" @change="handleCheckedCitiesChange">
-            <el-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</el-checkbox>
+          <el-checkbox-group v-model="roleMenuListModel.menuIds" @change="handleCheckedMenusChange">
+            <el-checkbox v-for="menu in menuLists" :label="menu.id" :key="menu.id">{{ menu.name }}</el-checkbox>
           </el-checkbox-group>
         </el-form-item>
       </el-form>
       <div style="text-align:right;">
-        <el-button type="danger" @click="selectRoleDialogVisible=false">
+        <el-button type="danger" @click="selectMenuDialogVisible=false">
           取消
         </el-button>
-        <el-button type="primary" @click="handleSelectRoleSubmit">
+        <el-button type="primary" @click="handleSelectMenuSubmit">
           确定
         </el-button>
       </div>
@@ -109,7 +109,8 @@
 
 <script>
 import {deepClone} from '@/utils'
-import {deleteById, insert, list, update} from '@/api/role2'
+import {deleteById, insert, list, update,insertRoleMenu} from '@/api/role2'
+import {getMenuList} from '@/api/menu'
 
 const defaultFormData = {
   id: '',
@@ -122,7 +123,10 @@ const defaultListQuery = {
   pageSize: 10,
   keyword: null
 };
-const cityOptions = ['上海', '北京', '广州', '深圳'];
+const defaultRoleMenuListModel = {
+  roleId: null,
+  menuIds: []
+};
 export default {
   data() {
     return {
@@ -134,17 +138,24 @@ export default {
       dialogVisible: false,
       dialogType: 'new',
       //角色分配
-      selectRoleDialogVisible: false,
+      selectMenuDialogVisible: false,
       checkAll: false,
-      checkedCities: ['上海', '北京'],
-      cities: cityOptions,
-      isIndeterminate: true
+      menuLists: [],
+      isIndeterminate: true,
+      roleMenuListModel: Object.assign({}, defaultRoleMenuListModel)
+
     }
   },
   created() {
-    this.getList()
+    this.getList();
+    this.getMenuList();
   },
   methods: {
+    getMenuList() {
+      getMenuList().then(response => {
+        this.menuLists = response.data
+      });
+    },
     handleResetSearch() {
       this.listQuery = Object.assign({}, defaultListQuery);
     },
@@ -225,23 +236,44 @@ export default {
         });
       }
     },
-    handleSelectMenu() {
-      this.selectRoleDialogVisible = true;
+    handleSelectMenu(row) {
+      this.roleMenuListModel = {
+        roleId: row.id,
+        menuIds: row.menuIds,
+      };
+      const menuListLength = this.menuLists.length;
+      this.checkAll = menuListLength === this.roleMenuListModel.menuIds.length;
+      this.isIndeterminate = menuListLength > 0 && menuListLength < this.roleMenuListModel.menuIds.length;
+      this.selectMenuDialogVisible = true;
     },
-    handleSelectRoleSubmit() {
-      this.$message({
-        type: 'warning',
-        message: '敬请期待!'
-      })
+    handleSelectMenuSubmit() {
+      if (this.roleMenuListModel.menuIds == null || this.roleMenuListModel.menuIds.length <= 0) {
+        this.$message({
+          type: 'error',
+          message: '请至少选择一个!'
+        });
+        return;
+      }
+      insertRoleMenu(this.roleMenuListModel).then(response => {
+        if (response.code === 0) {
+          this.$message({
+            type: 'success',
+            message: '操作成功!'
+          })
+        }
+        this.selectMenuDialogVisible = false
+        this.getList();
+      });
     },
     handleCheckAllChange(val) {
-      this.checkedCities = val ? cityOptions : [];
+      this.roleMenuListModel.menuIds = val ? this.menuLists.map(item => item.id) : [];
       this.isIndeterminate = false;
     },
-    handleCheckedCitiesChange(value) {
+    handleCheckedMenusChange(value) {
       let checkedCount = value.length;
-      this.checkAll = checkedCount === this.cities.length;
-      this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
+      this.checkAll = checkedCount === this.menuLists.length;
+      this.isIndeterminate = checkedCount > 0 && checkedCount < this.menuLists.length;
+      this.roleMenuListModel.menuIds.add(value);
     }
   }
 }
