@@ -43,6 +43,13 @@ export function getMenuList() {
   })
 }
 // 获取菜单树
+export function getMenuTreeList() {
+  return request({
+    url: '/sysMenu/treeList',
+    method: 'get'
+  })
+}
+// 获取分页菜单树
 export function getMenuPageTreeList() {
   return request({
     url: '/sysMenu/pageTreeList',

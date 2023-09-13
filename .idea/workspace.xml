@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-菜单展示树形列表">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-菜单展示树形表格">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/api/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/permission/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/menu.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +131,7 @@
       <workItem from="1694504892734" duration="3896000" />
       <workItem from="1694508807466" duration="2420000" />
       <workItem from="1694511834596" duration="551000" />
-      <workItem from="1694567098408" duration="10241000" />
+      <workItem from="1694567098408" duration="12347000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -310,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694575584092</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="权限管理-菜单展示树形表格">
+      <created>1694584442783</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1694584442783</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +350,7 @@
     <MESSAGE value="权限管理-调整页面" />
     <MESSAGE value="权限管理-新增管理员修改用户密码" />
     <MESSAGE value="权限管理-菜单展示树形列表" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理-菜单展示树形列表" />
+    <MESSAGE value="权限管理-菜单展示树形表格" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理-菜单展示树形表格" />
   </component>
 </project>

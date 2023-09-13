@@ -19,7 +19,7 @@
         <el-button type="primary" @click="handleExport()" size="small">导出</el-button>
       </div>
       <div class="table-container">
-        <el-table :data="menuTree" row-key="id">
+        <el-table :data="listData" row-key="id">
           <el-table-column prop="name" label="菜单名称"></el-table-column>
           <el-table-column prop="code" label="菜单编码"></el-table-column>
           <el-table-column prop="url" label="菜单地址"></el-table-column>
@@ -27,10 +27,6 @@
           <el-table-column prop="sort" label="排序"></el-table-column>
           <el-table-column label="操作" align="center">
             <template slot-scope="scope">
-              <el-button type="text" size="small"
-                         @click="handleAddSub(scope.row)"
-                         icon="el-icon-edit">添加子级
-              </el-button>
               <el-button type="text" size="small"
                          @click="handleEdit(scope.row)"
                          icon="el-icon-edit">编辑
@@ -56,6 +52,7 @@
         </el-pagination>
       </div>
     </el-card>
+    <!--    添加菜单-->
     <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改':'新增'" width="40%">
       <el-form :model="formData" label-width="80px" label-position="left">
         <el-row :gutter="20">
@@ -80,26 +77,47 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
+            <el-form-item label="上级菜单">
+              <el-row>
+                <el-col :span="18">
+                  <el-input v-model="formData.parentName" readonly></el-input>
+                </el-col>
+                <el-col :span="6">
+                  <el-button @click="menuTreeDialogVisible = true">选择</el-button>
+                </el-col>
+              </el-row>
+            </el-form-item>
           </el-col>
           <el-col :span="12">
           </el-col>
         </el-row>
       </el-form>
       <div style="text-align:right;">
-        <el-button type="danger" @click="dialogVisible=false">
+        <el-button type="danger" @click="dialogVisible=false" size="small">
           取消
         </el-button>
-        <el-button type="primary" @click="confirmSubmit">
+        <el-button type="primary" @click="confirmSubmit" size="small">
           确定
         </el-button>
       </div>
+    </el-dialog>
+    <el-dialog
+      title="选择上级菜单"
+      :visible="menuTreeDialogVisible"
+      @close="menuTreeDialogVisible = false"
+    >
+      <el-tree
+        :data="menuTree"
+        :props="treeProps"
+        @node-click="handleNodeClick"
+      ></el-tree>
     </el-dialog>
   </div>
 </template>
 
 <script>
 import {deepClone} from '@/utils'
-import {deleteById, getMenuPageTreeList, insert, update} from '@/api/menu'
+import {deleteById, getMenuPageTreeList, getMenuTreeList, insert, update} from '@/api/menu'
 
 const defaultFormData = {
   id: '',
@@ -108,6 +126,7 @@ const defaultFormData = {
   url: '',
   icon: '',
   parentId: '',
+  parentName: '',
   status: 1
 };
 const defaultListQuery = {
@@ -122,17 +141,29 @@ export default {
       listQuery: Object.assign({}, defaultListQuery),
       total: null,
       listLoading: false,
-      menuTree: [],
+      listData: [],
       dialogVisible: false,
       dialogType: 'new',
+      menuTree: [], // 上级菜单树形数据
+      treeProps: {
+        label: 'name',
+        children: 'children',
+      },
+      menuTreeDialogVisible: false, // 控制弹出框显示/隐藏
     }
   },
   created() {
     this.getList()
+    this.getTreeList();
   },
   mounted() {
   },
   methods: {
+    getTreeList() {
+      getMenuTreeList().then(response => {
+        this.menuTree = response.data;
+      });
+    },
     handleResetSearch() {
       this.listQuery = Object.assign({}, defaultListQuery);
     },
@@ -152,7 +183,7 @@ export default {
     getList() {
       this.listLoading = true;
       getMenuPageTreeList().then(response => {
-        this.menuTree = response.data.data;
+        this.listData = response.data.data;
         this.listLoading = false;
         this.total = response.data.totalNum;
       });
@@ -212,6 +243,12 @@ export default {
           this.getList();
         });
       }
+    },
+    // 处理上级菜单选择
+    handleNodeClick(data) {
+      this.formData.parentId = data.id;
+      this.formData.parentName = data.name;
+      this.menuTreeDialogVisible = false; // 关闭Dialog
     },
     handleImport() {
       this.$message({
