@@ -23,8 +23,12 @@
           <el-table-column prop="name" label="菜单名称"></el-table-column>
           <el-table-column prop="code" label="菜单编码"></el-table-column>
           <el-table-column prop="url" label="菜单地址"></el-table-column>
-          <el-table-column prop="icon" label="菜单图标"></el-table-column>
-          <el-table-column prop="sort" label="排序"></el-table-column>
+          <el-table-column label="菜单图标">
+            <template slot-scope="scope">
+              <!-- 在这里使用自定义模板来显示图标 -->
+              <i :class="scope.row.icon"></i>
+            </template>
+          </el-table-column>
           <el-table-column label="操作" align="center">
             <template slot-scope="scope">
               <el-button type="text" size="small"
@@ -83,7 +87,7 @@
                   <el-input v-model="formData.parentName" readonly></el-input>
                 </el-col>
                 <el-col :span="6">
-                  <el-button @click="menuTreeDialogVisible = true">选择</el-button>
+                  <el-button @click="handleSelectParentMenu">选择</el-button>
                 </el-col>
               </el-row>
             </el-form-item>
@@ -153,8 +157,7 @@ export default {
     }
   },
   created() {
-    this.getList()
-    this.getTreeList();
+    this.getList();
   },
   mounted() {
   },
@@ -197,6 +200,9 @@ export default {
       this.dialogType = 'edit'
       this.dialogVisible = true
       this.formData = deepClone(scope)
+      this.getTreeList();
+      //TODO 第三级菜单无法展示上级菜单
+      this.formData.parentName = this.menuTree.find((item) => item.id == scope.parentId).name;
     },
     handleDelete(row) {
       this.$confirm('确定要删除吗?', '提示', {
@@ -243,6 +249,9 @@ export default {
           this.getList();
         });
       }
+    },
+    handleSelectParentMenu() {
+      this.menuTreeDialogVisible = true;
     },
     // 处理上级菜单选择
     handleNodeClick(data) {
