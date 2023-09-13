@@ -10,7 +10,7 @@
             <el-form-item label="头像">
               <!-- 替换为您的文件上传接口 -->
               <el-upload
-                action="/api/upload"
+                action="/dev-api/profile/uploadAvatar"
                 :show-file-list="false"
                 :on-success="handleAvatarSuccess"
                 :before-upload="beforeAvatarUpload"
@@ -156,7 +156,24 @@ export default {
       }).catch(err => {
         console.error(err)
       })
-    }
+    },
+    beforeAvatarUpload(file) {
+      const isJPG = file.type === 'image/jpeg' || file.type === 'image/png';
+      const isLt500K = file.size / 1024 <= 500;
+
+      if (!isJPG) {
+        this.$message.error('只能上传 JPG 或 PNG 格式的图片');
+      }
+      if (!isLt500K) {
+        this.$message.error('图片大小不能超过500KB');
+      }
+
+      return isJPG && isLt500K;
+    },
+    handleAvatarSuccess(response, file) {
+      // 后端返回的图片Base64数据
+      this.user.avatar = response.data;
+    },
   }
 }
 </script>
