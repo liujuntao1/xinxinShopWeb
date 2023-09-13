@@ -3,6 +3,8 @@ import Vue from 'vue'
 import Cookies from 'js-cookie'
 
 import 'normalize.css/normalize.css' // a modern alternative to CSS resets
+import iconPicker from 'vue-fontawesome-elementui-icon-picker' // elementui图标库
+Vue.use(iconPicker)
 
 import Element from 'element-ui'
 import './styles/element-variables.scss'

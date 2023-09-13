@@ -42,11 +42,10 @@ export function getMenuList() {
     method: 'get'
   })
 }
-
 // 获取菜单树
-export function getMenuTreeListList() {
+export function getMenuPageTreeList() {
   return request({
-    url: '/sysMenu/treeList',
+    url: '/sysMenu/pageTreeList',
     method: 'get'
   })
 }
