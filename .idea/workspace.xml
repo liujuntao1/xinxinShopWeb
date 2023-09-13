@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-菜单列表-新增选择上级菜单">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-菜单列表-表单回显上级菜单">
+      <change afterPath="$PROJECT_DIR$/web/src/api/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/profile/components/Account.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/profile/components/Activity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/profile/components/UserCard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/profile/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +136,7 @@
       <workItem from="1694504892734" duration="3896000" />
       <workItem from="1694508807466" duration="2420000" />
       <workItem from="1694511834596" duration="551000" />
-      <workItem from="1694567098408" duration="14376000" />
+      <workItem from="1694567098408" duration="20122000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -321,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694586534174</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="权限管理-菜单列表-表单回显上级菜单">
+      <created>1694588539173</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1694588539173</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +371,7 @@
     <MESSAGE value="权限管理-菜单展示树形列表" />
     <MESSAGE value="权限管理-菜单展示树形表格" />
     <MESSAGE value="权限管理-菜单列表-新增选择上级菜单" />
-    <option name="LAST_COMMIT_MESSAGE" value="权限管理-菜单列表-新增选择上级菜单" />
+    <MESSAGE value="权限管理-菜单列表-表单回显上级菜单" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理-菜单列表-表单回显上级菜单" />
   </component>
 </project>

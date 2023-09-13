@@ -7,6 +7,7 @@ const state = {
   name: '',
   avatar: '',
   introduction: '',
+  userInfo: null,
   roles: []
 }
 
@@ -22,6 +23,9 @@ const mutations = {
   },
   SET_ROLES: (state, roles) => {
     state.roles = roles
+  },
+  SET_USERINFO: (state, userInfo) => {
+    state.userInfo = userInfo
   }
 }
 
@@ -56,8 +60,7 @@ const actions = {
         }
 
         commit('SET_ROLES', roles)
-        commit('SET_NAME', userName)
-        commit('SET_AVATAR', avatar)
+        commit('SET_USERINFO', data)
         resolve(data)
       }).catch(error => {
         reject(error)
