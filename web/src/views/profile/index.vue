@@ -16,7 +16,7 @@
                 :before-upload="beforeAvatarUpload"
               >
                 <img v-if="user.avatar" :src="user.avatar" class="avatar"/>
-                <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+                <img v-else src="../../assets/images/profile/noavatar.png" class="avatar"/>
               </el-upload>
             </el-form-item>
           </el-col>
