@@ -1,6 +1,6 @@
 import request from '@/utils/request'
 
-// 角色分页列表
+// 分页列表
 export function list(data) {
   return request({
     url: '/sysMenu/pageList',
@@ -9,7 +9,7 @@ export function list(data) {
   })
 }
 
-// 新增角色
+// 新增数据
 export function insert(data) {
   return request({
     url: '/sysMenu/insert',
@@ -18,7 +18,7 @@ export function insert(data) {
   })
 }
 
-// 修改角色
+// 修改数据
 export function update(data) {
   return request({
     url: '/sysMenu/update',
@@ -27,7 +27,7 @@ export function update(data) {
   })
 }
 
-// 删除单个角色
+// 删除单个数据
 export function deleteById(id) {
   return request({
     url: '/sysMenu/deleteById?id=' + id,
@@ -35,37 +35,22 @@ export function deleteById(id) {
   })
 }
 
-// 清空角色角色
-export function deleteUserRoleById(id) {
-  return request({
-    url: '/sysMenu/deleteUserRoleById',
-    method: 'post',
-    params: {id}
-  })
-}
-
-// 查询角色关联的角色
-export function listUserRoleById(id) {
-  return request({
-    url: '/sysMenu/listUserRoleById',
-    method: 'post',
-    params: {id}
-  })
-}
-
-// 新增角色角色
-export function insertUserRole(data) {
-  return request({
-    url: '/sysMenu/insertUserRole',
-    method: 'post',
-    data
-  })
-}
-
-// 新增角色角色
+// 获取菜单列表
 export function getMenuList() {
   return request({
     url: '/sysMenu/list',
     method: 'get'
   })
 }
+
+// 获取菜单树
+export function getMenuTreeListList() {
+  return request({
+    url: '/sysMenu/treeList',
+    method: 'get'
+  })
+}
+
+
+
+

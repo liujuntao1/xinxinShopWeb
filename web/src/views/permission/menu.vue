@@ -1,66 +1,13 @@
 <template>
   <div class="app-container">
     <el-button type="primary" @click="handleAdd()" size="small">添加菜单</el-button>
-    <div class="table-container">
-      <el-table ref="menuTable"
-                :data="listData"
-                style="width: 100%;"
-                v-loading="listLoading" border>
-        <el-table-column label="序号" align="center"
-                         type="index"
-                         width="60">
-        </el-table-column>
-        <el-table-column label="菜单名称" align="center">
-          <template slot-scope="scope">{{ scope.row.name }}</template>
-        </el-table-column>
-        <el-table-column label="菜单编码" align="center">
-          <template slot-scope="scope">{{ scope.row.code }}</template>
-        </el-table-column>
-        <el-table-column label="菜单地址" align="center">
-          <template slot-scope="scope">{{ scope.row.url }}</template>
-        </el-table-column>
-        <el-table-column label="菜单图标" align="center">
-          <template slot-scope="scope">{{ scope.row.icon }}</template>
-        </el-table-column>
-        <el-table-column label="创建时间" align="center">
-          <template slot-scope="scope">{{ scope.row.createdTime | formatDateTime }}</template>
-        </el-table-column>
-        <el-table-column label="状态" align="center">
-          <template slot-scope="scope">
-            <el-switch
-              @change="handleStatusChange(scope.row)"
-              :active-value="1"
-              :inactive-value="0"
-              v-model="scope.row.status">
-            </el-switch>
-          </template>
-        </el-table-column>
-        <el-table-column label="操作" align="center">
-          <template slot-scope="scope">
-            <el-button type="text" size="small"
-                       @click="handleEdit(scope.row)"
-                       icon="el-icon-edit">编辑
-            </el-button>
-            <el-button type="text" size="small"
-                       @click="handleDelete(scope.row)"
-                       icon="el-icon-delete">删除
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-    </div>
-    <div class="pagination-container">
-      <el-pagination
-        background
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        layout="total, sizes,prev, pager, next,jumper"
-        :current-page.sync="queryParam.pageNum"
-        :page-size="queryParam.pageSize"
-        :page-sizes="[5,10,15]"
-        :total="totalNum">
-      </el-pagination>
-    </div>
+    <el-tree
+      :data="menuTree"
+      :props="defaultProps"
+      :expand-on-click-node="false"
+      node-key="id"
+      @node-click="handleNodeClick"
+    ></el-tree>
     <el-dialog :visible.sync="dialogVisible" :title="dialogType==='edit'?'修改':'新增'" width="40%">
       <el-form :model="formData" label-width="80px" label-position="left">
         <el-row :gutter="20">
@@ -89,9 +36,7 @@
         </el-row>
         <el-row :gutter="20">
           <el-col :span="12">
-            <el-form-item label="上级菜单">
-              <el-input v-model="formData.parentId" placeholder="上级菜单"/>
-            </el-form-item>
+
           </el-col>
           <el-col :span="12">
           </el-col>
@@ -113,7 +58,7 @@
 
 <script>
 import {deepClone} from '@/utils'
-import {deleteById, insert, list, update} from '@/api/menu'
+import {deleteById, getMenuTreeListList, insert, update} from '@/api/menu'
 
 const defaultFormData = {
   id: '',
@@ -124,19 +69,15 @@ const defaultFormData = {
   parentId: '',
   status: 1
 }
-const defaultQueryParam = {
-  pageNum: 1,
-  pageSize: 10,
-  keyword: null
-};
 export default {
   data() {
     return {
       formData: Object.assign({}, defaultFormData),
-      listData: null,
-      totalNum: null,
-      listLoading: false,
-      queryParam: Object.assign({}, defaultQueryParam),
+      menuTree: [],
+      defaultProps: {
+        children: 'children',
+        label: 'name',
+      },
       dialogVisible: false,
       dialogType: 'new',
     }
@@ -144,30 +85,26 @@ export default {
   created() {
     this.getListData()
   },
+  mounted() {
+  },
   methods: {
     getListData() {
-      this.listLoading = true;
-      list(this.queryParam).then(response => {
-        this.listData = response.data.data
-        this.listLoading = false;
-        this.totalNum = response.data.totalNum;
+      getMenuTreeListList().then(response => {
+        this.menuTree = response.data;
       });
     },
-    handleResetSearch() {
-      this.queryParam = Object.assign({}, defaultQueryParam);
+    handleNodeClick(node) {
+      // 处理节点单击事件
+      this.selectedNode = node;
     },
-    handleSearchList() {
-      this.queryParam.pageNum = 1;
-      this.getListData();
+    editNode(node) {
+      alert(`编辑菜单项: ${node.name}`);
     },
-    handleSizeChange(val) {
-      this.queryParam.pageNum = 1;
-      this.queryParam.pageSize = val;
-      this.getListData();
+    deleteNode(node) {
+      alert(`删除菜单项: ${node.name}`);
     },
-    handleCurrentChange(val) {
-      this.queryParam.pageNum = val;
-      this.getListData();
+    addSubNode(node) {
+      alert(`新增子级菜单项: ${node.name}`);
     },
     handleAdd() {
       this.formData = Object.assign({}, defaultFormData)
