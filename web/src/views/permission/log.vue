@@ -1,64 +1,69 @@
 <template>
   <div class="app-container">
-    <el-form :inline="true" :model="listQuery" class="demo-form-inline">
-      <el-form-item label="用户">
-        <el-input v-model="listQuery.userId" placeholder="用户"></el-input>
-      </el-form-item>
-      <el-form-item label="ip">
-        <el-input v-model="listQuery.ip" placeholder="ip"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="handleSearchList">查询</el-button>
-        <el-button type="primary" @click="handleResetSearch">重置</el-button>
-      </el-form-item>
-    </el-form>
-    <div class="table-container">
-      <el-table ref="logTable"
-                :data="list"
-                style="width: 100%;"
-                v-loading="listLoading" border>
-        <el-table-column label="日志内容" align="center">
-          <template slot-scope="scope">{{ scope.row.logContent }}</template>
-        </el-table-column>
-        <el-table-column label="日志类型" align="center">
-          <template slot-scope="scope">{{ scope.row.logType }}</template>
-        </el-table-column>
-        <el-table-column label="操作人" align="center">
-          <template slot-scope="scope">{{ scope.row.userName }}</template>
-        </el-table-column>
-        <el-table-column label="操作ip" align="center">
-          <template slot-scope="scope">{{ scope.row.operationIp }}</template>
-        </el-table-column>
-        <el-table-column label="创建时间" align="center">
-          <template slot-scope="scope">{{ scope.row.createdTime | formatDateTime }}</template>
-        </el-table-column>
-        <el-table-column label="操作" align="center">
-          <template slot-scope="scope">
-            <el-row>
-              <el-button
-                type="text"
-                @click="handleEdit(scope.row)">
-                查看详情
+    <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <el-form :inline="true" :model="listQuery" class="demo-form-inline">
+          <el-form-item label="用户">
+            <el-input v-model="listQuery.userId" placeholder="用户"></el-input>
+          </el-form-item>
+          <el-form-item label="ip">
+            <el-input v-model="listQuery.ip" placeholder="ip"></el-input>
+          </el-form-item>
+          <el-form-item>
+            <el-button type="primary" @click="handleSearchList" size="small">查询</el-button>
+            <el-button type="primary" @click="handleResetSearch" size="small">重置</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
+      <div class="table-container">
+        <el-table ref="logTable"
+                  :data="list"
+                  style="width: 100%;"
+                  v-loading="listLoading" border>
+          <el-table-column label="序号" align="center"
+                           type="index"
+                           width="60">
+          </el-table-column>
+          <el-table-column label="日志内容" align="center">
+            <template slot-scope="scope">{{ scope.row.logContent }}</template>
+          </el-table-column>
+          <el-table-column label="日志类型" align="center">
+            <template slot-scope="scope">{{ scope.row.logType }}</template>
+          </el-table-column>
+          <el-table-column label="操作人" align="center">
+            <template slot-scope="scope">{{ scope.row.userName }}</template>
+          </el-table-column>
+          <el-table-column label="操作ip" align="center">
+            <template slot-scope="scope">{{ scope.row.operationIp }}</template>
+          </el-table-column>
+          <el-table-column label="创建时间" align="center">
+            <template slot-scope="scope">{{ scope.row.createdTime | formatDateTime }}</template>
+          </el-table-column>
+          <el-table-column label="操作" align="center">
+            <template slot-scope="scope">
+              <el-button type="text" size="small"
+                         @click="handleEdit(scope.row)"
+                         icon="el-icon-view">查看
               </el-button>
-            </el-row>
-          </template>
-        </el-table-column>
-      </el-table>
-    </div>
-    <div class="pagination-container">
-      <el-pagination
-        background
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        layout="total, sizes,prev, pager, next,jumper"
-        :current-page.sync="listQuery.pageNum"
-        :page-size="listQuery.pageSize"
-        :page-sizes="[5,10,15]"
-        :total="total">
-      </el-pagination>
-    </div>
+            </template>
+          </el-table-column>
+        </el-table>
+      </div>
+      <div class="pagination-container">
+        <el-pagination
+          background
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          layout="total, sizes,prev, pager, next,jumper"
+          :current-page.sync="listQuery.pageNum"
+          :page-size="listQuery.pageSize"
+          :page-sizes="[5,10,15]"
+          :total="total">
+        </el-pagination>
+      </div>
+    </el-card>
     <!--    查看详情-->
-    <el-dialog :visible.sync="dialogVisible" :title="'日志详情'" width="45%" >
+    <el-dialog :visible.sync="dialogVisible" :title="'日志详情'" width="45%">
       <el-form :model="user" label-width="100px" label-position="left">
         <el-row :gutter="20">
           <el-col :span="12">

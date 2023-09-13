@@ -1,11 +1,15 @@
 <template>
   <div class="app-container">
-    <el-button type="primary" @click="handleAdd()">添加菜单</el-button>
+    <el-button type="primary" @click="handleAdd()" size="small">添加菜单</el-button>
     <div class="table-container">
       <el-table ref="menuTable"
                 :data="listData"
                 style="width: 100%;"
                 v-loading="listLoading" border>
+        <el-table-column label="序号" align="center"
+                         type="index"
+                         width="60">
+        </el-table-column>
         <el-table-column label="菜单名称" align="center">
           <template slot-scope="scope">{{ scope.row.name }}</template>
         </el-table-column>
@@ -33,14 +37,13 @@
         </el-table-column>
         <el-table-column label="操作" align="center">
           <template slot-scope="scope">
-            <el-button
-              type="text"
-              @click="handleEdit(scope.row)">
-              编辑
+            <el-button type="text" size="small"
+                       @click="handleEdit(scope.row)"
+                       icon="el-icon-edit">编辑
             </el-button>
-            <el-button
-              type="text"
-              @click="handleDelete(scope.row)">删除
+            <el-button type="text" size="small"
+                       @click="handleDelete(scope.row)"
+                       icon="el-icon-delete">删除
             </el-button>
           </template>
         </el-table-column>
