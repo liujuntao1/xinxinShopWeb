@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="个人中心-修改个人信息、修改密码">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="个人中心-base64上传头像">
+      <change afterPath="$PROJECT_DIR$/web/src/assets/images/profile/noavatar.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/profile/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,26 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/刘俊涛/xx商城项目/xinxinShop/xinxinShopWeb/web/src/api&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\tools\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/刘俊涛/xx商城项目/xinxinShop/xinxinShopWeb/web/src/assets/images/profile",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "ts.external.directory.path": "D:\\tools\\IntelliJ IDEA 2022.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\web\src\assets\images\profile" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\web\src\api" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\api" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\statistics" />
       <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\order" />
-      <recent name="D:\刘俊涛\xx商城项目\xinxinShop\xinxinShopWeb\vue-element-admin-i18n\src\views\product" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev (2)">
@@ -130,7 +131,7 @@
       <workItem from="1694504892734" duration="3896000" />
       <workItem from="1694508807466" duration="2420000" />
       <workItem from="1694511834596" duration="551000" />
-      <workItem from="1694567098408" duration="21689000" />
+      <workItem from="1694567098408" duration="22348000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -335,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694595143599</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="个人中心-base64上传头像">
+      <created>1694596635129</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1694596635129</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +382,7 @@
     <MESSAGE value="权限管理-菜单列表-新增选择上级菜单" />
     <MESSAGE value="权限管理-菜单列表-表单回显上级菜单" />
     <MESSAGE value="个人中心-修改个人信息、修改密码" />
-    <option name="LAST_COMMIT_MESSAGE" value="个人中心-修改个人信息、修改密码" />
+    <MESSAGE value="个人中心-base64上传头像" />
+    <option name="LAST_COMMIT_MESSAGE" value="个人中心-base64上传头像" />
   </component>
 </project>

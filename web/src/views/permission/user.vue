@@ -41,11 +41,8 @@
           </el-table-column>
           <el-table-column label="头像" align="center">
             <template slot-scope="scope">
-              <div class="demo-type">
-                <el-avatar :size="60" src="https://empty" @error="errorHandler">
-                  <img :src="scope.row.avatar">
-                </el-avatar>
-              </div>
+              <img v-if="scope.row.avatar" :src="scope.row.avatar" class="avatar" width="50px" height="50px"/>
+              <img v-else src="../../assets/images/profile/noavatar.png" class="avatar" width="50px" height="50px"/>
             </template>
           </el-table-column>
           <el-table-column label="手机号" align="center">
