@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="changes">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="权限管理-调整页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/log.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/log.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/role.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/role.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/user.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +131,7 @@
       <workItem from="1694504892734" duration="3896000" />
       <workItem from="1694508807466" duration="2420000" />
       <workItem from="1694511834596" duration="551000" />
-      <workItem from="1694567098408" duration="2550000" />
+      <workItem from="1694567098408" duration="4227000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -282,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694512355505</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="权限管理-调整页面">
+      <created>1694569735561</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1694569735561</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +319,7 @@
     <MESSAGE value="权限管理-用户列表-分配角色" />
     <MESSAGE value="权限管理-角色列表-角色授权" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
+    <MESSAGE value="权限管理-调整页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="权限管理-调整页面" />
   </component>
 </project>

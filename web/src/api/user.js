@@ -61,3 +61,12 @@ export function insertUserRole(data) {
     data
   })
 }
+
+// 新增用户角色
+export function updateUserPwd(data) {
+  return request({
+    url: '/sysUser/updateUserPwd',
+    method: 'post',
+    data
+  })
+}

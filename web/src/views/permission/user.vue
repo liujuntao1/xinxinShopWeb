@@ -81,6 +81,10 @@
                          @click="handleDelete(scope.row)"
                          icon="el-icon-delete">删除
               </el-button>
+              <el-button type="text" size="small"
+                         @click="handleUpdatePwd(scope.row)"
+                         icon="el-icon-edit">密码修改
+              </el-button>
             </template>
           </el-table-column>
         </el-table>
@@ -172,12 +176,29 @@
         </el-button>
       </div>
     </el-dialog>
+    <!--  密码修改-->
+    <el-dialog :visible.sync="updatePwdDialogVisible" :title="'密码修改'" width="40%">
+      <el-form ref="updateUserPwdModel" :model="updateUserPwdModel" :rules="updateUserPwdModelRules" label-width="80px"
+               label-position="left">
+        <el-form-item label="新密码">
+          <el-input ref="pwd" v-model="updateUserPwdModel.pwd" placeholder="新密码"/>
+        </el-form-item>
+      </el-form>
+      <div style="text-align:right;">
+        <el-button type="danger" @click="updatePwdDialogVisible=false">
+          取消
+        </el-button>
+        <el-button type="primary" @click="handleUpdatePwdSubmit">
+          确定
+        </el-button>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
 <script>
 import {deepClone} from '@/utils'
-import {deleteById, insert, insertUserRole, list, update} from '@/api/user'
+import {deleteById, insert, insertUserRole, list, update, updateUserPwd} from '@/api/user'
 import {getRoleList} from '@/api/role2'
 
 const defaultUser = {
@@ -199,8 +220,19 @@ const defaultUserRoleListModel = {
   userId: null,
   roleIds: []
 };
+const defaultUpdateUserPwdModel = {
+  userId: null,
+  pwd: null
+};
 export default {
   data() {
+    const validatePwd = (rule, value, callback) => {
+      if (value.length <= 6) {
+        callback(new Error('密码长度不能低于6位！'))
+      } else {
+        callback()
+      }
+    }
     return {
       user: Object.assign({}, defaultUser),
       list: null,
@@ -214,7 +246,12 @@ export default {
       checkAll: false,
       roleLists: [],
       isIndeterminate: true,
-      userRoleListModel: Object.assign({}, defaultUserRoleListModel)
+      userRoleListModel: Object.assign({}, defaultUserRoleListModel),
+      updatePwdDialogVisible: false,
+      updateUserPwdModel: Object.assign({}, defaultUpdateUserPwdModel),
+      updateUserPwdModelRules: {
+        pwd: [{required: true, trigger: 'blur', validator: validatePwd}],
+      },
     }
   },
   created() {
@@ -356,6 +393,28 @@ export default {
       this.$message({
         type: 'success',
         message: '敬请期待！'
+      })
+    },
+    handleUpdatePwd(row) {
+      this.updateUserPwdModel.userId = row.id;
+      this.updatePwdDialogVisible = true;
+    },
+    handleUpdatePwdSubmit() {
+      this.$refs.updateUserPwdModel.validate(valid => {
+        if (valid) {
+          updateUserPwd(this.updateUserPwdModel).then(response => {
+            if (response.code === 0) {
+              this.$message({
+                type: 'success',
+                message: '操作成功!'
+              })
+            }
+            this.updatePwdDialogVisible = false
+          });
+        } else {
+          console.log('error submit!!')
+          return false
+        }
       })
     }
   }
