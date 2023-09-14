@@ -122,7 +122,11 @@
               <el-input v-model="user.email" placeholder="邮箱"/>
             </el-form-item>
           </el-col>
-          <!--          TODO 待扩展字段-性别、出生日期-->
+          <el-col :span="12">
+            <el-form-item label="联系地址">
+              <el-input v-model="user.address" placeholder="住址"/>
+            </el-form-item>
+          </el-col>
           <el-col :span="12">
             <el-form-item label="性别">
               <el-radio-group v-model="user.sex">
@@ -205,7 +209,10 @@ const defaultUser = {
   phone: '',
   email: '',
   avatar: '',
-  birthday: '',
+  birthday: null,
+  address: null,
+  description: null,
+  sex: null,
   status: 1
 }
 const defaultListQuery = {

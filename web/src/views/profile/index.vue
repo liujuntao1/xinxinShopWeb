@@ -50,6 +50,9 @@
                       placeholder="选择日期时间">
                     </el-date-picker>
                   </el-form-item>
+                  <el-form-item label="联系地址" prop="phoneNumber">
+                    <el-input v-model="user.address" placeholder="请输入手机号"></el-input>
+                  </el-form-item>
                   <el-form-item label="个人简介" prop="name">
                     <el-input
                       type="textarea"
@@ -57,7 +60,7 @@
                       placeholder="请输入个人简介"
                       maxlength="200"
                       show-word-limit
-                      v-model="user.desc">
+                      v-model="user.description">
                     </el-input>
                   </el-form-item>
                   <el-form-item>

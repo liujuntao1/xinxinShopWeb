@@ -4,40 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="登录头像设置、默认头像设置">
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="项目框架调整-删除无用模块">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/README.zh-CN.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/api/article.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/modules/charts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/modules/components.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/modules/nested.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/router/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/store/modules/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/charts/keyboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/statistics/keyboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/charts/line.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/statistics/line.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/charts/mix-chart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/statistics/mix-chart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/documentation/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu1/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-1/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-2/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-2/menu1-2-1/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-2/menu1-2-2/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu1/menu1-3/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/nested/menu2/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/components/SwitchRoles.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/directive.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/user.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/src/views/profile/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/statistics/statistics.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/tab/components/TabPane.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/tab/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/table/complex-table.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/table/drag-table.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/table/dynamic-table/components/FixedThead.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/table/dynamic-table/components/UnfixedThead.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/table/dynamic-table/index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/table/inline-edit-table.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +136,7 @@
       <workItem from="1694567098408" duration="22524000" />
       <workItem from="1694597488257" duration="1577000" />
       <workItem from="1694655069945" duration="352000" />
-      <workItem from="1694655760354" duration="3026000" />
+      <workItem from="1694655760354" duration="4898000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -390,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694598008002</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="项目框架调整-删除无用模块">
+      <created>1694659409471</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1694659409471</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,6 +411,7 @@
     <MESSAGE value="个人中心-base64上传头像" />
     <MESSAGE value="用户列表-展示用户头像和默认头像展示" />
     <MESSAGE value="登录头像设置、默认头像设置" />
-    <option name="LAST_COMMIT_MESSAGE" value="登录头像设置、默认头像设置" />
+    <MESSAGE value="项目框架调整-删除无用模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目框架调整-删除无用模块" />
   </component>
 </project>
