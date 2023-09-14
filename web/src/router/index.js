@@ -6,7 +6,7 @@ import Layout from '@/layout'
 /* Router Modules */
 
 Vue.use(Router)
-
+// 通用路由，不需要后端返回的路由菜单
 export const constantRoutes = [
   {
     path: '/login',
@@ -49,11 +49,9 @@ export const constantRoutes = [
         meta: {title: '个人中心', icon: 'user', noCache: true}
       }
     ]
-  },
-  // 404 page must be placed at the end !!!
-  {path: '*', redirect: '/404', hidden: true}
+  }
 ]
-
+// 静态路由数组
 export const asyncRoutes = [
   {
     path: '/permission/',

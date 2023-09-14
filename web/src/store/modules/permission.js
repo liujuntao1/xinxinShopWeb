@@ -24,13 +24,14 @@ export function filterAsyncRoutes(routes) {
   const res = []
   routes.forEach(route => {
     const tmp = {...route}
-    //动态找到页面路径
+    //查看菜单组件是否为layout
     const component = tmp.component
     if (route.component) {
       //判断是否是一级菜单
       if (component == 'Layout') {
         tmp.component = Layout
       } else {
+        //二级菜单拼装组件地址
         tmp.component = (resolve) => require([`@/views${component}`], resolve)
       }
     }
@@ -55,8 +56,8 @@ const mutations = {
 }
 
 const actions = {
-  //静态路由
-  /*  GenerateRoutes({commit}, data) {
+  //生成静态路由
+  /*  generateRoutes({commit}, data) {
       return new Promise(resolve => {
         const {menus} = data;
         const accessedRouters = asyncRoutes.filter(v => {
@@ -80,13 +81,19 @@ const actions = {
         resolve();
       })
     },*/
-  // 动态获取用户菜单路由
-  getMenuRouterList({commit}) {
+  // 生成动态路由
+  generateTrendsRouter({commit}) {
     return new Promise((resolve, reject) => {
       getMenuRouterList().then((res) => {
-        //把返回的数据存到vuex里面
+        //获取菜单数据
         const menus = res.data;
+        //对菜单数据进行组装过滤
         const accessedRouters = filterAsyncRoutes(menus)
+        //添加404页面路由
+        let obj = {path: '*', redirect: '/404', hidden: true}
+        accessedRouters.push(obj)
+        //路由排序
+        sortRouters(accessedRouters)
         commit('SET_ROUTERS', accessedRouters)
         resolve()
       }).catch(error => {
