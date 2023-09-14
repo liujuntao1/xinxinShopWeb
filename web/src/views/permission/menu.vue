@@ -93,6 +93,21 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
+            <el-form-item label="菜单类型">
+              <el-select v-model="formData.type" placeholder="请选择">
+                <el-option
+                  v-for="item in menuTypes"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value">
+                </el-option>
+              </el-select>
+            </el-form-item>
+          </el-col>
+          <el-col :span="12">
+            <el-form-item label="排序">
+              <el-input v-model="formData.sort" placeholder="排序" type="number"/>
+            </el-form-item>
           </el-col>
         </el-row>
       </el-form>
@@ -124,13 +139,15 @@ import {deepClone} from '@/utils'
 import {deleteById, getMenuPageTreeList, getMenuTreeList, insert, update} from '@/api/menu'
 
 const defaultFormData = {
-  id: '',
-  name: '',
-  code: '',
-  url: '',
-  icon: '',
-  parentId: '',
-  parentName: '',
+  id: null,
+  name: null,
+  code: null,
+  url: null,
+  icon: null,
+  parentId: null,
+  parentName: null,
+  type: null,
+  sort: null,
   status: 1
 };
 const defaultListQuery = {
@@ -141,6 +158,16 @@ const defaultListQuery = {
 export default {
   data() {
     return {
+      menuTypes: [{
+        value: 1,
+        label: '一级菜单'
+      }, {
+        value: 2,
+        label: '二级菜单'
+      }, {
+        value: 3,
+        label: '按钮权限'
+      }],
       formData: Object.assign({}, defaultFormData),
       listQuery: Object.assign({}, defaultListQuery),
       total: null,
@@ -195,6 +222,7 @@ export default {
       this.formData = Object.assign({}, defaultFormData)
       this.dialogType = 'new'
       this.dialogVisible = true
+      this.getTreeList();
     },
     handleEdit(scope) {
       this.dialogType = 'edit'

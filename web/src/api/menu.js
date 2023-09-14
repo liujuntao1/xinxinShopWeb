@@ -42,6 +42,7 @@ export function getMenuList() {
     method: 'get'
   })
 }
+
 // 获取菜单树
 export function getMenuTreeList() {
   return request({
@@ -49,10 +50,19 @@ export function getMenuTreeList() {
     method: 'get'
   })
 }
+
 // 获取分页菜单树
 export function getMenuPageTreeList() {
   return request({
     url: '/sysMenu/pageTreeList',
+    method: 'get'
+  })
+}
+
+// 获取菜单路由列表
+export function getMenuRouterList() {
+  return request({
+    url: '/sysMenu/menuRouterList',
     method: 'get'
   })
 }

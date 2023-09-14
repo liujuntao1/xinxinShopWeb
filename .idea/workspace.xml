@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="项目框架调整-删除无用模块">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="696b31a1-e634-49bf-84d5-450bf8846b23" name="更改" comment="个人中心页面">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/permission/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/user.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/views/profile/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/profile/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/mock/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/mock/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/api/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/permission.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/store/modules/permission.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/store/modules/permission.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/components-demo/dnd-list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/components-demo/dnd-list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/permission/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/views/permission/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/views/permission/page.vue" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +140,7 @@
       <workItem from="1694567098408" duration="22524000" />
       <workItem from="1694597488257" duration="1577000" />
       <workItem from="1694655069945" duration="352000" />
-      <workItem from="1694655760354" duration="4898000" />
+      <workItem from="1694655760354" duration="12708000" />
     </task>
     <task id="LOCAL-00001" summary="基础框架搭建">
       <created>1694161452520</created>
@@ -369,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694659409471</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="个人中心页面">
+      <created>1694661197470</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1694661197470</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -412,6 +423,7 @@
     <MESSAGE value="用户列表-展示用户头像和默认头像展示" />
     <MESSAGE value="登录头像设置、默认头像设置" />
     <MESSAGE value="项目框架调整-删除无用模块" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目框架调整-删除无用模块" />
+    <MESSAGE value="个人中心页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="个人中心页面" />
   </component>
 </project>

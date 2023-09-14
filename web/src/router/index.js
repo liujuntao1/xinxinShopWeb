@@ -49,12 +49,14 @@ export const constantRoutes = [
         meta: {title: '个人中心', icon: 'user', noCache: true}
       }
     ]
-  }
+  },
+  // 404 page must be placed at the end !!!
+  {path: '*', redirect: '/404', hidden: true}
 ]
 
 export const asyncRoutes = [
   {
-    path: '/permission',
+    path: '/permission/',
     component: Layout,
     redirect: '/permission/page',
     alwaysShow: true,
@@ -83,7 +85,7 @@ export const asyncRoutes = [
         }
       },
       {
-        path: 'user',
+        path: '/permission/user/',
         component: () => import('@/views/permission/user'),
         name: 'UserPermission',
         meta: {
@@ -182,8 +184,6 @@ export const asyncRoutes = [
       },
     ]
   },
-  // 404 page must be placed at the end !!!
-  {path: '*', redirect: '/404', hidden: true}
 ]
 
 const createRouter = () => new Router({

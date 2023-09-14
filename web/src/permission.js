@@ -4,7 +4,7 @@ import NProgress from 'nprogress' // progress bar
 import 'nprogress/nprogress.css' // progress bar style
 import {getToken} from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
-import { Message } from 'element-ui'
+import {Message} from 'element-ui'
 
 NProgress.configure({showSpinner: false}) // NProgress Configuration
 
@@ -26,17 +26,16 @@ router.beforeEach(async (to, from, next) => {
       NProgress.done() // hack: https://github.com/PanJiaChen/vue-element-admin/pull/2939
     } else {
       if (store.getters.roles.length === 0) {
-        store.dispatch('user/getInfo').then(res => { // 拉取用户信息
-          let menus=res.menus;
-          let username=res.userName;
-          store.dispatch('permission/GenerateRoutes', { menus,username }).then(() => { // 生成可访问的路由表
+        store.dispatch('user/getInfo').then((res) => {
+          const {menu}=res// 拉取用户信息
+          store.dispatch('permission/getMenuRouterList',{menu}).then(() => {
             router.addRoutes(store.getters.addRouters); // 动态添加可访问路由表
-            next({ ...to, replace: true })
+            next({...to, replace: true})
           })
         }).catch((err) => {
           store.dispatch('user/resetToken').then(() => {
             Message.error(err || 'Verification failed, please login again')
-            next({ path: '/' })
+            next({path: '/'})
           })
         })
       } else {
