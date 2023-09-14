@@ -5,7 +5,7 @@ export function list(data) {
   return request({
     url: '/sysUser/pageList',
     method: 'post',
-    params: {pageNum:data.pageNum,pageSize:data.pageSize,userName:data.userName,phone:data.phone}
+    params: {pageNum: data.pageNum, pageSize: data.pageSize, userName: data.userName, phone: data.phone}
   })
 }
 
@@ -35,24 +35,6 @@ export function deleteById(id) {
   })
 }
 
-// 清空用户角色
-export function deleteUserRoleById(id) {
-  return request({
-    url: '/sysUser/deleteUserRoleById',
-    method: 'post',
-    params: {id}
-  })
-}
-
-// 查询用户关联的角色
-export function listUserRoleById(id) {
-  return request({
-    url: '/sysUser/listUserRoleById',
-    method: 'post',
-    params: {id}
-  })
-}
-
 // 新增用户角色
 export function insertUserRole(data) {
   return request({
@@ -62,7 +44,7 @@ export function insertUserRole(data) {
   })
 }
 
-// 新增用户角色
+// 管理员修改用户密码
 export function updateUserPwd(data) {
   return request({
     url: '/sysUser/updateUserPwd',

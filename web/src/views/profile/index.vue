@@ -4,10 +4,7 @@
       <el-form :model="user" ref="form" label-width="100px">
         <el-row :gutter="20">
           <el-col :span="6" :xs="24">
-            <el-form-item label="用户名" prop="name">
-              <el-input v-model="user.userName" placeholder="请输入用户名" disabled></el-input>
-            </el-form-item>
-            <el-form-item label="头像">
+            <el-form-item>
               <!-- 替换为您的文件上传接口 -->
               <el-upload
                 action="/dev-api/profile/uploadAvatar"
@@ -17,7 +14,11 @@
               >
                 <img v-if="user.avatar" :src="user.avatar" class="avatar"/>
                 <img v-else src="../../assets/images/profile/noavatar.png" class="avatar"/>
+                <span style="font-size: 3px">点击头像进行修改</span>
               </el-upload>
+            </el-form-item>
+            <el-form-item label="用户名" prop="name">
+              <el-input v-model="user.userName" placeholder="请输入用户名" disabled></el-input>
             </el-form-item>
           </el-col>
           <el-col :span="18" :xs="24">
@@ -25,7 +26,9 @@
               <el-tabs v-model="activeTab">
                 <el-tab-pane label="个人信息" name="account">
                   <el-form-item label="姓名" prop="name">
-                    <el-input v-model="user.nickName" placeholder="请输入姓名"></el-input>
+                    <el-input v-model="user.nickName" placeholder="请输入姓名"
+                              maxlength="10"
+                              show-word-limit></el-input>
                   </el-form-item>
                   <el-form-item label="邮箱" prop="email">
                     <el-input v-model="user.email" placeholder="请输入邮箱"></el-input>
@@ -48,7 +51,14 @@
                     </el-date-picker>
                   </el-form-item>
                   <el-form-item label="个人简介" prop="name">
-                    <el-input v-model="user.desc" placeholder="请输入个人简介"></el-input>
+                    <el-input
+                      type="textarea"
+                      :rows="3"
+                      placeholder="请输入个人简介"
+                      maxlength="200"
+                      show-word-limit
+                      v-model="user.desc">
+                    </el-input>
                   </el-form-item>
                   <el-form-item>
                     <el-button type="primary" @click="updateProfile">提交</el-button>
@@ -57,13 +67,14 @@
                 <el-tab-pane label="修改密码" name="updatePwd">
                   <el-form :model="updatePwdModel" ref="form" label-width="100px">
                     <el-form-item label="旧密码" prop="name">
-                      <el-input v-model="updatePwdModel.oldPwd" placeholder="请输入旧密码"></el-input>
+                      <el-input v-model="updatePwdModel.oldPwd" placeholder="请输入旧密码" type="password"></el-input>
                     </el-form-item>
                     <el-form-item label="新密码" prop="name">
-                      <el-input v-model="updatePwdModel.newPwd" placeholder="请输入新密码"></el-input>
+                      <el-input v-model="updatePwdModel.newPwd" placeholder="请输入新密码" type="password"></el-input>
                     </el-form-item>
                     <el-form-item label="再次确认密码" prop="name">
-                      <el-input v-model="updatePwdModel.twoNewPWd" placeholder="请输入新密码（再次确认密码）"></el-input>
+                      <el-input v-model="updatePwdModel.twoNewPWd" placeholder="请输入新密码（再次确认密码）"
+                                type="password"></el-input>
                     </el-form-item>
                     <el-form-item>
                       <el-button type="primary" @click="updatePwd">提交</el-button>

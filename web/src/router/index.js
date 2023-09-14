@@ -46,7 +46,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/profile/index'),
         name: 'Profile',
-        meta: {title: 'profile', icon: 'user', noCache: true}
+        meta: {title: '个人中心', icon: 'user', noCache: true}
       }
     ]
   }
@@ -57,7 +57,7 @@ export const asyncRoutes = [
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',
-    alwaysShow: true, // will always show the root menu
+    alwaysShow: true,
     name: 'Permission',
     meta: {
       title: '权限管理',
@@ -106,7 +106,7 @@ export const asyncRoutes = [
     path: '/product',
     component: Layout,
     redirect: '/product/page',
-    alwaysShow: true, // will always show the root menu
+    alwaysShow: true,
     name: 'Product',
     meta: {
       title: '商品管理',
@@ -127,7 +127,7 @@ export const asyncRoutes = [
     path: '/order',
     component: Layout,
     redirect: '/order/page',
-    alwaysShow: true, // will always show the root menu
+    alwaysShow: true,
     name: 'Order',
     meta: {
       title: '订单管理',
@@ -149,28 +149,39 @@ export const asyncRoutes = [
     path: '/statistics',
     component: Layout,
     redirect: '/statistics/page',
-    alwaysShow: true, // will always show the root menu
+    alwaysShow: true,
     name: 'Statistics',
     meta: {
-      title: '统计管理',
+      title: '统计分析（待开发）',
       icon: 'el-icon-s-operation'
     },
     children: [
       {
-        path: 'statistics',
-        component: () => import('@/views/statistics/statistics'),
-        name: 'StatisticsPermission',
+        path: 'keyboard',
+        component: () => import('@/views/statistics/keyboard'),
+        name: 'keyboardPermission',
         meta: {
-          title: '统计分析'
+          title: '销量统计'
+        }
+      },
+      {
+        path: 'line',
+        component: () => import('@/views/statistics/line'),
+        name: 'linePermission',
+        meta: {
+          title: '订单统计'
+        }
+      },
+      {
+        path: 'mixChart',
+        component: () => import('@/views/statistics/mix-chart'),
+        name: 'mixChartPermission',
+        meta: {
+          title: '库存统计'
         }
       },
     ]
   },
-  /** when your routing map is too long, you can split it into small modules **/
-  // componentsRouter,
-  // chartsRouter,
-  // nestedRouter,
-  // tableRouter,
   // 404 page must be placed at the end !!!
   {path: '*', redirect: '/404', hidden: true}
 ]
